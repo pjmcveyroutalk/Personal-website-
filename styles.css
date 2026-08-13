@@ -786,7 +786,7 @@ footer {
 
   .global-footer-line {
     grid-template-columns: 1fr;
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   .global-footer-line span {
@@ -794,11 +794,15 @@ footer {
     border-bottom: 1px solid var(--line);
 
     text-align: left;
-    padding-left: 5px;
+    padding: 18px 5px;
   }
 
   .global-footer-line span:last-child {
     border-bottom: none;
+  }
+
+  #connect {
+    padding-top: 70px;
   }
 
   .connect {
@@ -813,4 +817,4 @@ footer {
     align-items: flex-start;
     justify-content: center;
   }
-}
+  }
