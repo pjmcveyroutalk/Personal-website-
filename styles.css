@@ -79,12 +79,14 @@ h2 {
   flex-direction: column;
   justify-content: center;
   padding: 58px 0 70px;
+  text-align: center;
 }
 
 .hero-masthead {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 28px;
 
   padding: 18px 0 24px;
   margin-bottom: 68px;
@@ -114,6 +116,9 @@ h2 {
 
 .hero-intro {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -141,6 +146,7 @@ h1 span {
 .actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
 
   margin-top: 38px;
@@ -198,9 +204,10 @@ h1 span {
 .stats div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
 
-  padding-right: 30px;
+  padding: 0 18px;
 }
 
 .stats strong {
@@ -224,13 +231,27 @@ h1 span {
   gap: 100px;
 }
 
+.two-column > div:first-child {
+  text-align: center;
+}
+
+.two-column > div:first-child h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .copy {
   color: var(--muted);
   font-size: 1.05rem;
+  text-align: left;
 }
 
 .copy p + p {
   margin-top: 25px;
+}
+
+.copy > div:last-child {
+  text-align: center;
 }
 
 
@@ -238,7 +259,8 @@ h1 span {
 
 .section-intro {
   max-width: 750px;
-  margin-bottom: 70px;
+  margin: 0 auto 70px;
+  text-align: center;
 }
 
 .section-intro > p:last-child {
@@ -247,7 +269,7 @@ h1 span {
   color: var(--muted);
   font-size: 1.05rem;
 
-  margin-top: 25px;
+  margin: 25px auto 0;
 }
 
 .services {
@@ -288,6 +310,7 @@ h1 span {
 .services p {
   color: var(--muted);
   font-size: 0.92rem;
+  text-align: left;
 }
 
 
@@ -299,12 +322,13 @@ h1 span {
 
 .portfolio-heading {
   max-width: 760px;
-  margin-bottom: 55px;
+  margin: 0 auto 55px;
+  text-align: center;
 }
 
 .portfolio-heading > p:last-child {
   max-width: 620px;
-  margin-top: 24px;
+  margin: 24px auto 0;
 
   color: var(--muted);
   font-size: 1.05rem;
@@ -369,6 +393,10 @@ h1 span {
   align-items: end;
 }
 
+.portfolio-content > div:first-child {
+  text-align: center;
+}
+
 .portfolio-number {
   margin-bottom: 12px;
 
@@ -381,6 +409,10 @@ h1 span {
 .portfolio-content h3 {
   font-size: clamp(2.6rem, 7vw, 5.7rem);
   letter-spacing: -0.055em;
+}
+
+.portfolio-description {
+  text-align: left;
 }
 
 .portfolio-description p {
@@ -428,11 +460,14 @@ h1 span {
   font-family: "Manrope", sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
+
+  text-align: center;
 }
 
 .capability p {
   color: var(--muted);
   font-size: 0.82rem;
+  text-align: left;
 }
 
 
@@ -440,11 +475,14 @@ h1 span {
 
 .global-heading {
   max-width: 900px;
-  margin-bottom: 70px;
+  margin: 0 auto 70px;
+  text-align: center;
 }
 
 .global h2 {
   max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .global-layout {
@@ -461,6 +499,8 @@ h1 span {
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.8;
+
+  text-align: left;
 }
 
 .global-statement p + p {
@@ -500,6 +540,8 @@ h1 span {
 
   color: var(--muted);
   font-size: 0.92rem;
+
+  text-align: left;
 }
 
 
@@ -570,10 +612,14 @@ h1 span {
 .connect-heading {
   position: sticky;
   top: 60px;
+
+  text-align: center;
 }
 
 .connect-heading h2 {
   max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .connect-panel {
@@ -588,6 +634,8 @@ h1 span {
 
   padding: 30px 0 45px;
   margin: 0;
+
+  text-align: left;
 }
 
 .connect-options {
@@ -627,11 +675,14 @@ h1 span {
   line-height: 1.7;
 
   margin: 0;
+
+  text-align: left;
 }
 
 .connect-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
 
   margin-top: 38px;
@@ -650,12 +701,15 @@ footer {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
 
   border-top: 1px solid var(--line);
 
   color: var(--muted);
   font-size: 0.8rem;
+
+  text-align: center;
 }
 
 
@@ -706,6 +760,7 @@ footer {
 
   .services h3 {
     margin-top: 35px;
+    text-align: center;
   }
 
   .portfolio-content {
@@ -737,6 +792,8 @@ footer {
 
   .global-statement {
     max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .global-footer-line {
@@ -771,11 +828,13 @@ footer {
 
   .hero-masthead {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
 
     padding: 20px 0 22px;
     margin-bottom: 46px;
+
+    text-align: center;
   }
 
   .masthead-brand {
@@ -802,6 +861,7 @@ footer {
 
   .actions {
     flex-direction: column;
+    align-items: center;
   }
 
   .button {
@@ -812,8 +872,26 @@ footer {
     margin-top: 42px;
   }
 
+  .two-column > div:first-child {
+    text-align: center;
+  }
+
+  .copy {
+    text-align: left;
+  }
+
   .services article {
     padding: 30px 5px;
+  }
+
+  .services article > span,
+  .services h3 {
+    display: block;
+    text-align: center;
+  }
+
+  .services p {
+    text-align: left;
   }
 
   .portfolio-section {
@@ -880,6 +958,11 @@ footer {
 
   .capability > span {
     margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .capability p {
+    text-align: left;
   }
 
   #work {
@@ -893,6 +976,7 @@ footer {
 
   .global-heading {
     margin-bottom: 45px;
+    text-align: center;
   }
 
   .global-point {
@@ -912,14 +996,14 @@ footer {
   .global-footer-line span {
     min-height: 64px;
 
-    justify-content: flex-start;
+    justify-content: center;
 
     padding: 16px 14px;
 
     border-right: none;
     border-bottom: 1px solid var(--line);
 
-    text-align: left;
+    text-align: center;
   }
 
   .global-footer-line span:last-child {
@@ -935,6 +1019,10 @@ footer {
     gap: 42px;
   }
 
+  .connect-heading {
+    text-align: center;
+  }
+
   .connect-heading h2 {
     max-width: 100%;
   }
@@ -944,6 +1032,8 @@ footer {
 
     font-size: 1rem;
     line-height: 1.75;
+
+    text-align: left;
   }
 
   .connect-option {
@@ -959,10 +1049,12 @@ footer {
 
   .connect-option p {
     font-size: 0.88rem;
+    text-align: left;
   }
 
   .connect-actions {
     flex-direction: column;
+    align-items: center;
     margin-top: 32px;
   }
 
@@ -973,10 +1065,12 @@ footer {
 
   footer {
     min-height: 78px;
-    gap: 8px;
+    gap: 6px;
 
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+
+    text-align: center;
   }
 }
