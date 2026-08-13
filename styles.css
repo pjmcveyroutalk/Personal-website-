@@ -804,34 +804,54 @@ footer {
   }
 
   .portfolio-heading {
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   .portfolio-feature {
-    min-height: 500px;
-    padding: 26px;
+    min-height: auto;
+    padding: 24px;
   }
 
   .portfolio-top {
-    margin-bottom: 130px;
+    margin-bottom: 72px;
   }
 
   .portfolio-label {
-    max-width: 220px;
+    max-width: 235px;
     line-height: 1.7;
   }
 
+  .portfolio-content {
+    gap: 28px;
+  }
+
+  .portfolio-number {
+    margin-bottom: 10px;
+  }
+
   .portfolio-content h3 {
-    font-size: clamp(2.8rem, 14vw, 4.5rem);
+    font-size: clamp(2.75rem, 13vw, 4.2rem);
+  }
+
+  .portfolio-description p {
+    margin-bottom: 22px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .portfolio-description span {
+    display: inline-block;
+    margin-top: 2px;
   }
 
   .capability-grid {
     grid-template-columns: 1fr;
+    margin-top: 22px;
   }
 
   .capability {
     min-height: auto;
-    padding: 28px 5px;
+    padding: 24px 5px;
 
     border-right: none;
     border-bottom: 1px solid var(--line);
@@ -842,7 +862,15 @@ footer {
   }
 
   .capability > span {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
+  }
+
+  #work {
+    padding-bottom: 58px;
+  }
+
+  #global {
+    padding-top: 62px;
   }
 
   .global-heading {
