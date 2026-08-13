@@ -871,6 +871,7 @@ footer {
 
   #global {
     padding-top: 62px;
+    padding-bottom: 40px;
   }
 
   .global-heading {
@@ -902,7 +903,7 @@ footer {
   }
 
   #connect {
-    padding-top: 70px;
+    padding-top: 45px;
     padding-bottom: 55px;
   }
 
