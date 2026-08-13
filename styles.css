@@ -768,7 +768,7 @@ footer {
 
   .hero {
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 45px;
   }
 
   h1 {
@@ -792,7 +792,7 @@ footer {
   }
 
   .stats {
-    margin-top: 65px;
+    margin-top: 42px;
   }
 
   .services article {
@@ -926,4 +926,4 @@ footer {
     align-items: flex-start;
     justify-content: center;
   }
-  }
+}
