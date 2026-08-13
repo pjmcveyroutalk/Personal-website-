@@ -33,58 +33,6 @@ a {
 }
 
 
-/* HEADER */
-
-.header {
-  width: min(calc(100% - 40px), var(--max-width));
-  margin: 0 auto;
-  min-height: 84px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-bottom: 1px solid var(--line);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
-}
-
-.brand-mark {
-  width: 35px;
-  height: 35px;
-
-  display: grid;
-  place-items: center;
-
-  border: 1px solid var(--line);
-  border-radius: 50%;
-
-  color: var(--accent);
-}
-
-nav {
-  display: flex;
-  gap: 30px;
-}
-
-nav a {
-  color: var(--muted);
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: var(--text);
-}
-
-
 /* SHARED */
 
 .hero,
@@ -127,12 +75,45 @@ h2 {
 
 .hero {
   min-height: 780px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 58px 0 70px;
+}
 
-  padding: 100px 0 70px;
+.hero-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 0 24px;
+  margin-bottom: 68px;
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.masthead-brand {
+  color: var(--accent);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.masthead-location {
+  color: var(--muted);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+.hero-intro {
+  width: 100%;
 }
 
 h1 {
@@ -482,6 +463,10 @@ h1 span {
   line-height: 1.8;
 }
 
+.global-statement p + p {
+  margin-top: 24px;
+}
+
 .global-points {
   border-top: 1px solid var(--line);
 }
@@ -651,13 +636,13 @@ footer {
 
 @media (max-width: 850px) {
 
-  nav {
-    display: none;
-  }
-
   .hero {
     min-height: auto;
-    padding-top: 100px;
+    padding-top: 54px;
+  }
+
+  .hero-masthead {
+    margin-bottom: 58px;
   }
 
   .stats {
@@ -746,29 +731,34 @@ footer {
 
 @media (max-width: 600px) {
 
-  .header,
   .hero,
   .section,
   footer {
     width: min(calc(100% - 32px), var(--max-width));
   }
 
-  .header {
-    min-height: 72px;
-  }
-
-  .brand {
-    font-size: 0.9rem;
-  }
-
-  .brand-mark {
-    width: 32px;
-    height: 32px;
-  }
-
   .hero {
-    padding-top: 80px;
+    padding-top: 36px;
     padding-bottom: 45px;
+  }
+
+  .hero-masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    padding: 20px 0 22px;
+    margin-bottom: 46px;
+  }
+
+  .masthead-brand {
+    font-size: 0.92rem;
+    letter-spacing: 0.16em;
+  }
+
+  .masthead-location {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
   }
 
   h1 {
