@@ -66,7 +66,7 @@ h2 {
 }
 
 .section {
-  padding: 130px 0;
+  padding: 105px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -75,10 +75,13 @@ h2 {
 
 .hero {
   min-height: 780px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 58px 0 70px;
+
+  padding: 58px 0 62px;
+
   text-align: center;
 }
 
@@ -89,7 +92,7 @@ h2 {
   gap: 28px;
 
   padding: 18px 0 24px;
-  margin-bottom: 68px;
+  margin-bottom: 58px;
 
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -116,6 +119,7 @@ h2 {
 
 .hero-intro {
   width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,7 +201,7 @@ h1 span {
 
   border-top: 1px solid var(--line);
 
-  margin-top: 100px;
+  margin-top: 58px;
   padding-top: 28px;
 }
 
@@ -225,10 +229,15 @@ h1 span {
 
 /* ABOUT */
 
+#about {
+  padding-top: 92px;
+  padding-bottom: 82px;
+}
+
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: 88px;
 }
 
 .two-column > div:first-child {
@@ -250,16 +259,22 @@ h1 span {
   margin-top: 25px;
 }
 
-.copy > div:last-child {
+.about-signature {
   text-align: center;
 }
 
 
 /* WORK */
 
+#work {
+  padding-top: 82px;
+  padding-bottom: 88px;
+}
+
 .section-intro {
   max-width: 750px;
-  margin: 0 auto 70px;
+  margin: 0 auto 58px;
+
   text-align: center;
 }
 
@@ -298,13 +313,20 @@ h1 span {
 }
 
 .services article > span {
+  display: block;
+
   color: var(--muted);
   font-size: 0.75rem;
+
+  text-align: center;
 }
 
 .services h3 {
   font-size: 1.7rem;
-  margin: 65px 0 18px;
+
+  margin: 58px 0 18px;
+
+  text-align: center;
 }
 
 .services p {
@@ -317,17 +339,20 @@ h1 span {
 /* SELECTED WORK */
 
 .portfolio-section {
-  margin-top: 100px;
+  margin-top: 82px;
 }
 
 .portfolio-heading {
   max-width: 760px;
-  margin: 0 auto 55px;
+
+  margin: 0 auto 48px;
+
   text-align: center;
 }
 
 .portfolio-heading > p:last-child {
   max-width: 620px;
+
   margin: 24px auto 0;
 
   color: var(--muted);
@@ -367,7 +392,7 @@ h1 span {
   justify-content: space-between;
   align-items: flex-start;
 
-  margin-bottom: 135px;
+  margin-bottom: 110px;
 }
 
 .portfolio-label {
@@ -381,6 +406,7 @@ h1 span {
 
 .portfolio-arrow {
   color: var(--accent);
+
   font-size: 2.2rem;
   line-height: 1;
 }
@@ -429,58 +455,131 @@ h1 span {
   font-weight: 600;
 }
 
-.capability-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
 
-  margin-top: 25px;
+/* ROUTE METHOD */
+
+.route-section {
+  margin-top: 68px;
+  padding-top: 68px;
 
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
-.capability {
-  min-height: 190px;
-  padding: 28px;
+.route-heading {
+  max-width: 790px;
 
-  border-right: 1px solid var(--line);
-}
-
-.capability:last-child {
-  border-right: none;
-}
-
-.capability > span {
-  display: block;
-
-  margin-bottom: 45px;
-
-  color: var(--text);
-
-  font-family: "Manrope", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
+  margin: 0 auto 48px;
 
   text-align: center;
 }
 
-.capability p {
+.route-heading h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.route-heading > p:last-child {
+  max-width: 650px;
+
+  margin: 24px auto 0;
+
   color: var(--muted);
-  font-size: 0.82rem;
-  text-align: left;
+
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.route-grid {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.route-step {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 28px;
+
+  align-items: start;
+
+  padding: 30px 18px;
+
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.route-step:last-child {
+  border-bottom: none;
+}
+
+.route-step:hover {
+  background: var(--surface);
+}
+
+.route-letter {
+  width: 54px;
+  height: 54px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(217, 255, 67, 0.36);
+  border-radius: 50%;
+
+  color: var(--accent);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.route-label {
+  margin-bottom: 8px;
+
+  color: var(--accent);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.route-step h3 {
+  margin-bottom: 10px;
+
+  font-size: 1.35rem;
+}
+
+.route-step div > p:last-child {
+  max-width: 720px;
+
+  color: var(--muted);
+
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 
 
 /* GLOBAL */
 
+#global {
+  padding-top: 84px;
+  padding-bottom: 70px;
+}
+
 .global-heading {
   max-width: 900px;
-  margin: 0 auto 70px;
+
+  margin: 0 auto 56px;
+
   text-align: center;
 }
 
 .global h2 {
   max-width: 900px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -488,7 +587,7 @@ h1 span {
 .global-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: 100px;
+  gap: 82px;
 
   align-items: start;
 }
@@ -497,6 +596,7 @@ h1 span {
   max-width: 420px;
 
   color: var(--muted);
+
   font-size: 1.08rem;
   line-height: 1.8;
 
@@ -516,7 +616,7 @@ h1 span {
   grid-template-columns: 70px 1fr;
   gap: 30px;
 
-  padding: 30px 0;
+  padding: 28px 0;
 
   border-bottom: 1px solid var(--line);
 }
@@ -532,6 +632,7 @@ h1 span {
 
 .global-point h3 {
   margin-bottom: 10px;
+
   font-size: 1.35rem;
 }
 
@@ -539,41 +640,56 @@ h1 span {
   max-width: 520px;
 
   color: var(--muted);
+
   font-size: 0.92rem;
 
   text-align: left;
 }
 
 
-/* GLOBAL REACH STRIP */
+/* GLOBAL REACH */
+
+.global-reach {
+  margin-top: 52px;
+}
+
+.global-reach-heading {
+  max-width: 600px;
+
+  margin: 0 auto 24px;
+
+  text-align: center;
+}
+
+.global-reach-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.global-reach-heading h3 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: -0.03em;
+}
 
 .global-footer-line {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  margin-top: 58px;
-  padding: 10px;
+  padding: 8px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(217, 255, 67, 0.06),
-      rgba(255, 255, 255, 0.015) 48%
-    ),
-    var(--surface);
+  background: var(--surface);
 
-  border: 1px solid rgba(217, 255, 67, 0.18);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
 .global-footer-line span {
-  min-height: 82px;
+  min-height: 74px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 20px 18px;
+  padding: 18px;
 
   border-right: 1px solid var(--line);
 
@@ -601,10 +717,15 @@ h1 span {
 
 /* CONNECT */
 
+#connect {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
 .connect {
   display: grid;
   grid-template-columns: 1fr 0.85fr;
-  gap: 100px;
+  gap: 82px;
 
   align-items: start;
 }
@@ -618,6 +739,7 @@ h1 span {
 
 .connect-heading h2 {
   max-width: 650px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -632,7 +754,7 @@ h1 span {
   font-size: 1.05rem;
   line-height: 1.8;
 
-  padding: 30px 0 45px;
+  padding: 28px 0 38px;
   margin: 0;
 
   text-align: left;
@@ -647,7 +769,7 @@ h1 span {
   grid-template-columns: 48px 1fr;
   gap: 20px;
 
-  padding: 30px 0;
+  padding: 28px 0;
 
   border-bottom: 1px solid var(--line);
 }
@@ -662,8 +784,9 @@ h1 span {
 }
 
 .connect-option h3 {
-  font-size: 1.25rem;
   margin-bottom: 12px;
+
+  font-size: 1.25rem;
 }
 
 .connect-option p {
@@ -685,7 +808,7 @@ h1 span {
   justify-content: center;
   gap: 12px;
 
-  margin-top: 38px;
+  margin-top: 34px;
 }
 
 .connect-actions .button {
@@ -697,7 +820,7 @@ h1 span {
 /* FOOTER */
 
 footer {
-  min-height: 100px;
+  min-height: 90px;
 
   display: flex;
   align-items: center;
@@ -707,6 +830,7 @@ footer {
   border-top: 1px solid var(--line);
 
   color: var(--muted);
+
   font-size: 0.8rem;
 
   text-align: center;
@@ -719,24 +843,24 @@ footer {
 
   .hero {
     min-height: auto;
-    padding-top: 54px;
+    padding-top: 48px;
   }
 
   .hero-masthead {
-    margin-bottom: 58px;
+    margin-bottom: 50px;
   }
 
   .stats {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 26px;
 
-    margin-top: 75px;
+    margin-top: 48px;
   }
 
   .two-column,
   .connect {
     grid-template-columns: 1fr;
-    gap: 55px;
+    gap: 46px;
   }
 
   .connect-heading {
@@ -759,39 +883,30 @@ footer {
   }
 
   .services h3 {
-    margin-top: 35px;
-    text-align: center;
+    margin-top: 34px;
   }
 
   .portfolio-content {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 34px;
   }
 
   .portfolio-top {
-    margin-bottom: 90px;
+    margin-bottom: 82px;
   }
 
-  .capability-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .capability:nth-child(2) {
-    border-right: none;
-  }
-
-  .capability:nth-child(1),
-  .capability:nth-child(2) {
-    border-bottom: 1px solid var(--line);
+  .route-step {
+    grid-template-columns: 72px 1fr;
   }
 
   .global-layout {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 44px;
   }
 
   .global-statement {
     max-width: 650px;
+
     margin-left: auto;
     margin-right: auto;
   }
@@ -822,8 +937,8 @@ footer {
   }
 
   .hero {
-    padding-top: 36px;
-    padding-bottom: 45px;
+    padding-top: 34px;
+    padding-bottom: 38px;
   }
 
   .hero-masthead {
@@ -832,7 +947,7 @@ footer {
     gap: 8px;
 
     padding: 20px 0 22px;
-    margin-bottom: 46px;
+    margin-bottom: 42px;
 
     text-align: center;
   }
@@ -856,7 +971,7 @@ footer {
   }
 
   .section {
-    padding: 90px 0;
+    padding: 72px 0;
   }
 
   .actions {
@@ -869,19 +984,37 @@ footer {
   }
 
   .stats {
-    margin-top: 42px;
+    margin-top: 36px;
   }
 
-  .two-column > div:first-child {
-    text-align: center;
+  #about {
+    padding-top: 68px;
+    padding-bottom: 58px;
+  }
+
+  .two-column {
+    gap: 38px;
   }
 
   .copy {
     text-align: left;
   }
 
+  .about-signature {
+    margin-top: 34px !important;
+  }
+
+  #work {
+    padding-top: 58px;
+    padding-bottom: 60px;
+  }
+
+  .section-intro {
+    margin-bottom: 44px;
+  }
+
   .services article {
-    padding: 30px 5px;
+    padding: 28px 5px;
   }
 
   .services article > span,
@@ -890,16 +1023,20 @@ footer {
     text-align: center;
   }
 
+  .services h3 {
+    margin-top: 30px;
+  }
+
   .services p {
     text-align: left;
   }
 
   .portfolio-section {
-    margin-top: 75px;
+    margin-top: 60px;
   }
 
   .portfolio-heading {
-    margin-bottom: 38px;
+    margin-bottom: 36px;
   }
 
   .portfolio-feature {
@@ -908,7 +1045,7 @@ footer {
   }
 
   .portfolio-top {
-    margin-bottom: 72px;
+    margin-bottom: 68px;
   }
 
   .portfolio-label {
@@ -930,6 +1067,7 @@ footer {
 
   .portfolio-description p {
     margin-bottom: 22px;
+
     font-size: 0.95rem;
     line-height: 1.7;
   }
@@ -939,66 +1077,81 @@ footer {
     margin-top: 2px;
   }
 
-  .capability-grid {
-    grid-template-columns: 1fr;
-    margin-top: 22px;
+  .route-section {
+    margin-top: 52px;
+    padding-top: 52px;
   }
 
-  .capability {
-    min-height: auto;
-    padding: 24px 5px;
-
-    border-right: none;
-    border-bottom: 1px solid var(--line);
+  .route-heading {
+    margin-bottom: 36px;
   }
 
-  .capability:last-child {
-    border-bottom: none;
+  .route-heading > p:last-child {
+    font-size: 0.96rem;
   }
 
-  .capability > span {
-    margin-bottom: 16px;
-    text-align: center;
+  .route-step {
+    grid-template-columns: 58px 1fr;
+    gap: 16px;
+
+    padding: 26px 4px;
   }
 
-  .capability p {
-    text-align: left;
+  .route-letter {
+    width: 46px;
+    height: 46px;
+
+    font-size: 1.1rem;
   }
 
-  #work {
-    padding-bottom: 58px;
+  .route-step h3 {
+    font-size: 1.15rem;
+  }
+
+  .route-step div > p:last-child {
+    font-size: 0.88rem;
   }
 
   #global {
-    padding-top: 62px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 48px;
   }
 
   .global-heading {
-    margin-bottom: 45px;
-    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .global-layout {
+    gap: 36px;
   }
 
   .global-point {
-    grid-template-columns: 45px 1fr;
-    gap: 15px;
+    grid-template-columns: 42px 1fr;
+    gap: 14px;
 
-    padding: 26px 0;
+    padding: 24px 0;
+  }
+
+  .global-reach {
+    margin-top: 40px;
+  }
+
+  .global-reach-heading {
+    margin-bottom: 20px;
   }
 
   .global-footer-line {
     grid-template-columns: 1fr;
 
-    margin-top: 38px;
-    padding: 8px;
+    padding: 6px;
   }
 
   .global-footer-line span {
-    min-height: 64px;
+    min-height: 58px;
 
     justify-content: center;
 
-    padding: 16px 14px;
+    padding: 14px;
 
     border-right: none;
     border-bottom: 1px solid var(--line);
@@ -1011,12 +1164,12 @@ footer {
   }
 
   #connect {
-    padding-top: 45px;
-    padding-bottom: 55px;
+    padding-top: 54px;
+    padding-bottom: 52px;
   }
 
   .connect {
-    gap: 42px;
+    gap: 36px;
   }
 
   .connect-heading {
@@ -1028,7 +1181,7 @@ footer {
   }
 
   .connect-lead {
-    padding: 26px 0 35px;
+    padding: 24px 0 32px;
 
     font-size: 1rem;
     line-height: 1.75;
@@ -1037,10 +1190,10 @@ footer {
   }
 
   .connect-option {
-    grid-template-columns: 42px 1fr;
-    gap: 14px;
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
 
-    padding: 26px 0;
+    padding: 24px 0;
   }
 
   .connect-option h3 {
@@ -1055,7 +1208,8 @@ footer {
   .connect-actions {
     flex-direction: column;
     align-items: center;
-    margin-top: 32px;
+
+    margin-top: 30px;
   }
 
   .connect-actions .button {
@@ -1064,7 +1218,7 @@ footer {
   }
 
   footer {
-    min-height: 78px;
+    min-height: 76px;
     gap: 6px;
 
     flex-direction: column;
