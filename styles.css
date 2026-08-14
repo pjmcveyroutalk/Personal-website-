@@ -1697,4 +1697,7 @@ a.secondary:hover {
   }
 
   .background-video {
-    display:
+    display: none;
+  }
+
+}
