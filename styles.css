@@ -1629,4 +1629,83 @@ a.secondary:hover {
   }
 
   .global-point {
-    grid-template-colu
+    grid-template-columns: 38px 1fr;
+
+    gap: 12px;
+
+    padding:
+      23px
+      0;
+  }
+
+  .reach-item {
+    min-height: 52px;
+
+    padding-left: 26px;
+  }
+
+  .connect-section {
+    gap: 38px;
+  }
+
+  .connect-lead {
+    font-size: 0.94rem;
+  }
+
+  .connect-option {
+    grid-template-columns: 36px 1fr;
+
+    gap: 10px;
+  }
+
+  .connect-actions {
+    flex-direction: column;
+  }
+
+  .connect-actions .button {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .site-footer {
+    min-height: 100px;
+
+    margin-top: 10px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding:
+      20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+
+  .background-video {
+    display: none;
+  }
+
+}
