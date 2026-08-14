@@ -1,26 +1,19 @@
 :root {
   --bg: #050708;
-
   --panel: rgba(8, 12, 11, 0.38);
   --panel-strong: rgba(8, 11, 10, 0.58);
   --panel-soft: rgba(15, 21, 18, 0.32);
-
   --text: #f3f5ef;
   --muted: #b2b7b2;
   --muted-dark: #7c837e;
-
   --line: rgba(255, 255, 255, 0.16);
   --line-strong: rgba(255, 255, 255, 0.24);
-
   --accent: #d9ff43;
   --accent-soft: rgba(217, 255, 67, 0.12);
-
   --radius: 24px;
   --radius-small: 16px;
-
   --max-width: 1180px;
   --panel-padding: clamp(32px, 6vw, 78px);
-
   --shadow:
     0 24px 80px rgba(0, 0, 0, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -41,7 +34,6 @@ html {
 
 body {
   min-height: 100vh;
-
   background:
     radial-gradient(
       circle at 18% 12%,
@@ -59,12 +51,9 @@ body {
       #09100d 45%,
       #050707 100%
     );
-
   color: var(--text);
-
   font-family: "Inter", sans-serif;
   line-height: 1.65;
-
   overflow-x: hidden;
 }
 
@@ -89,14 +78,10 @@ a {
 .site-background {
   position: fixed;
   inset: 0;
-
   z-index: -10;
-
   width: 100%;
   height: 100%;
-
   overflow: hidden;
-
   background:
     radial-gradient(
       circle at 18% 12%,
@@ -109,39 +94,30 @@ a {
       #08100c 50%,
       #050707
     );
-
   pointer-events: none;
 }
 
 .background-video {
   position: absolute;
-
   top: 50%;
   left: 50%;
-
   width: 100%;
   height: 100%;
-
   min-width: 100%;
   min-height: 100%;
-
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
-
-  transform: translate(-50%, -50%) scale(1.02);
-
+  transform: translate(-50%, -50%);
   filter:
     brightness(0.82)
     contrast(1.04)
     saturate(0.98);
-
   opacity: 1;
 }
 
 .background-overlay {
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(
       180deg,
@@ -157,7 +133,6 @@ a {
       rgba(0, 0, 0, 0.08) 76%,
       rgba(0, 0, 0, 0.18) 100%
     );
-
   pointer-events: none;
 }
 
@@ -166,17 +141,10 @@ a {
 
 .site-shell {
   position: relative;
-
   z-index: 1;
-
   width: min(calc(100% - 32px), var(--max-width));
-
   margin: 0 auto;
-
-  padding:
-    20px
-    0
-    44px;
+  padding: 20px 0 44px;
 }
 
 
@@ -184,9 +152,7 @@ a {
 
 .glass-panel {
   position: relative;
-
   overflow: hidden;
-
   background:
     linear-gradient(
       145deg,
@@ -194,27 +160,19 @@ a {
       rgba(255, 255, 255, 0.012)
     ),
     var(--panel);
-
   border: 1px solid var(--line);
-
   border-radius: var(--radius);
-
   box-shadow: var(--shadow);
-
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
 }
 
 .glass-panel::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   z-index: 0;
-
   pointer-events: none;
-
   background:
     linear-gradient(
       135deg,
@@ -230,7 +188,6 @@ a {
 
 .section {
   margin-top: 18px;
-
   padding:
     clamp(58px, 8vw, 104px)
     var(--panel-padding);
@@ -248,28 +205,19 @@ h3 {
 
 h1 {
   max-width: 940px;
-
-  margin:
-    0
-    auto
-    30px;
-
+  margin: 0 auto 30px;
   font-size: clamp(3.3rem, 8vw, 7rem);
-
   letter-spacing: -0.058em;
 }
 
 h1 span {
   display: block;
-
   color: var(--muted);
 }
 
 h2 {
   max-width: 800px;
-
   font-size: clamp(2.35rem, 5.5vw, 4.8rem);
-
   letter-spacing: -0.052em;
 }
 
@@ -279,14 +227,10 @@ h3 {
 
 .eyebrow {
   margin-bottom: 20px;
-
   color: var(--accent);
-
   font-size: 0.69rem;
   font-weight: 700;
-
   letter-spacing: 0.17em;
-
   text-transform: uppercase;
 }
 
@@ -296,12 +240,7 @@ h3 {
 
 .centered-heading {
   max-width: 880px;
-
-  margin:
-    0
-    auto
-    54px;
-
+  margin: 0 auto 54px;
   text-align: center;
 }
 
@@ -312,16 +251,9 @@ h3 {
 
 .section-lead {
   max-width: 650px;
-
-  margin:
-    24px
-    auto
-    0;
-
+  margin: 24px auto 0;
   color: var(--muted);
-
   font-size: 1rem;
-
   line-height: 1.8;
 }
 
@@ -330,21 +262,13 @@ h3 {
 
 .button {
   min-height: 50px;
-
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
-  padding:
-    0
-    24px;
-
+  padding: 0 24px;
   border-radius: 100px;
-
   font-size: 0.84rem;
   font-weight: 700;
-
   transition:
     transform 0.2s ease,
     background 0.2s ease,
@@ -358,24 +282,19 @@ a.button:hover {
 
 .primary {
   background: var(--accent);
-
   color: #080a08;
-
   box-shadow:
     0 8px 28px rgba(217, 255, 67, 0.14);
 }
 
 .secondary {
   background: rgba(255, 255, 255, 0.04);
-
   border: 1px solid var(--line-strong);
-
   color: var(--text);
 }
 
 a.secondary:hover {
   background: rgba(255, 255, 255, 0.08);
-
   border-color: rgba(255, 255, 255, 0.32);
 }
 
@@ -384,26 +303,12 @@ a.secondary:hover {
 
 .site-header {
   min-height: 76px;
-
   display: grid;
-
-  grid-template-columns:
-    auto
-    1fr
-    auto;
-
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-
   gap: 28px;
-
-  padding:
-    12px
-    18px
-    12px
-    24px;
-
+  padding: 12px 18px 12px 24px;
   border-radius: 18px;
-
   background:
     linear-gradient(
       145deg,
@@ -415,45 +320,34 @@ a.secondary:hover {
 
 .brand {
   display: flex;
-
   align-items: baseline;
-
   gap: 7px;
-
   font-family: "Manrope", sans-serif;
-
   font-size: 0.78rem;
-
   letter-spacing: 0.13em;
 }
 
 .brand span {
   color: var(--accent);
-
   font-weight: 700;
 }
 
 .brand strong {
   color: var(--text);
-
   font-weight: 600;
 }
 
 .site-nav {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   gap: clamp(18px, 3vw, 38px);
 }
 
 .site-nav a {
   color: var(--muted);
-
   font-size: 0.76rem;
   font-weight: 600;
-
   transition: color 0.2s ease;
 }
 
@@ -463,13 +357,8 @@ a.secondary:hover {
 
 .header-coming-soon {
   min-height: 42px;
-
-  padding:
-    0
-    18px;
-
+  padding: 0 18px;
   font-size: 0.72rem;
-
   cursor: default;
 }
 
@@ -478,56 +367,41 @@ a.secondary:hover {
 
 .hero {
   min-height: 760px;
-
   margin-top: 18px;
-
   display: flex;
-
   flex-direction: column;
   justify-content: space-between;
-
   padding:
     clamp(70px, 10vw, 120px)
     var(--panel-padding)
     46px;
-
   text-align: center;
 }
 
 .hero-intro {
   display: flex;
-
   flex-direction: column;
   align-items: center;
 }
 
 .hero-text {
   max-width: 660px;
-
   color: var(--muted);
-
   font-size: clamp(1rem, 2vw, 1.15rem);
-
   line-height: 1.8;
 }
 
 .actions {
   display: flex;
-
   flex-wrap: wrap;
-
   justify-content: center;
-
   gap: 12px;
-
   margin-top: 36px;
 }
 
 .hero-foundation {
   margin-top: 90px;
-
   padding-top: 30px;
-
   border-top: 1px solid var(--line);
 }
 
@@ -537,25 +411,16 @@ a.secondary:hover {
 
 .stats {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 }
 
 .stat {
   display: grid;
-
   grid-template-columns: 34px 1fr;
-
   gap: 15px;
-
   min-height: 96px;
-
-  padding:
-    8px
-    28px;
-
+  padding: 8px 28px;
   text-align: left;
-
   border-right: 1px solid var(--line);
 }
 
@@ -565,36 +430,27 @@ a.secondary:hover {
 
 .stat:last-child {
   padding-right: 0;
-
   border-right: none;
 }
 
 .stat-number {
   color: var(--accent);
-
   font-size: 0.67rem;
   font-weight: 700;
-
   letter-spacing: 0.12em;
 }
 
 .stat strong {
   display: block;
-
   margin-bottom: 7px;
-
   font-family: "Manrope", sans-serif;
-
   font-size: 1.2rem;
 }
 
 .stat p {
   max-width: 250px;
-
   color: var(--muted);
-
   font-size: 0.79rem;
-
   line-height: 1.6;
 }
 
@@ -607,38 +463,24 @@ a.secondary:hover {
 
 .about-section .section-heading {
   max-width: 760px;
-
   text-align: center;
-
-  margin:
-    0
-    auto
-    58px;
+  margin: 0 auto 58px;
 }
 
 .about-section .section-heading h2 {
-  margin:
-    0
-    auto;
+  margin: 0 auto;
 }
 
 .about-layout {
   display: grid;
-
-  grid-template-columns:
-    1fr
-    0.9fr;
-
+  grid-template-columns: 1fr 0.9fr;
   gap: clamp(48px, 8vw, 92px);
-
   align-items: start;
 }
 
 .about-copy {
   color: var(--muted);
-
   font-size: 1rem;
-
   line-height: 1.82;
 }
 
@@ -652,68 +494,48 @@ a.secondary:hover {
 
 .principle {
   display: grid;
-
   grid-template-columns: 44px 1fr;
-
   gap: 18px;
-
-  padding:
-    24px
-    0;
-
+  padding: 24px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .principle > span {
   color: var(--accent);
-
   font-size: 0.68rem;
   font-weight: 700;
-
   letter-spacing: 0.12em;
 }
 
 .principle h3 {
   margin-bottom: 9px;
-
   font-size: 1.18rem;
 }
 
 .principle p {
   color: var(--muted);
-
   font-size: 0.87rem;
-
   line-height: 1.7;
 }
 
 .about-signature {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   gap: 6px;
-
   margin-top: 54px;
-
   padding-top: 28px;
-
   border-top: 1px solid var(--line);
-
   text-align: center;
 }
 
 .about-signature strong {
   font-family: "Manrope", sans-serif;
-
   font-size: 1.1rem;
 }
 
 .about-signature span {
   color: var(--muted);
-
   font-size: 0.78rem;
 }
 
@@ -722,28 +544,17 @@ a.secondary:hover {
 
 .services {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
-  border:
-    1px
-    solid
-    var(--line);
-
+  border: 1px solid var(--line);
   border-radius: var(--radius-small);
-
   overflow: hidden;
-
   background: rgba(0, 0, 0, 0.08);
 }
 
 .service-card {
   min-height: 330px;
-
   padding: 34px;
-
   border-right: 1px solid var(--line);
-
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -759,28 +570,21 @@ a.secondary:hover {
 
 .service-number {
   display: block;
-
   margin-bottom: 72px;
-
   color: var(--accent);
-
   font-size: 0.7rem;
   font-weight: 700;
-
   letter-spacing: 0.13em;
 }
 
 .service-card h3 {
   margin-bottom: 18px;
-
   font-size: 1.55rem;
 }
 
 .service-card p {
   color: var(--muted);
-
   font-size: 0.9rem;
-
   line-height: 1.75;
 }
 
@@ -789,52 +593,29 @@ a.secondary:hover {
 
 .partner-heading {
   max-width: 790px;
-
-  margin:
-    0
-    auto
-    56px;
-
+  margin: 0 auto 56px;
   text-align: center;
 }
 
 .partner-heading h2 {
-  margin:
-    0
-    auto;
+  margin: 0 auto;
 }
 
 .partner-heading > p:last-child {
   max-width: 620px;
-
-  margin:
-    24px
-    auto
-    0;
-
+  margin: 24px auto 0;
   color: var(--muted);
-
   line-height: 1.8;
 }
 
 .partner-layout {
   display: grid;
-
-  grid-template-columns:
-    0.8fr
-    1.2fr;
-
+  grid-template-columns: 0.8fr 1.2fr;
   gap: clamp(44px, 8vw, 94px);
-
   align-items: center;
-
-  padding:
-    40px;
-
+  padding: 40px;
   border: 1px solid var(--line);
-
   border-radius: var(--radius-small);
-
   background:
     linear-gradient(
       135deg,
@@ -846,21 +627,13 @@ a.secondary:hover {
 
 .partner-identity {
   position: relative;
-
   min-height: 230px;
-
   display: flex;
-
   flex-direction: column;
   justify-content: flex-end;
-
-  padding:
-    28px;
-
+  padding: 28px;
   border: 1px solid var(--line);
-
   border-radius: 14px;
-
   background:
     radial-gradient(
       circle at 50% 15%,
@@ -868,38 +641,30 @@ a.secondary:hover {
       transparent 35%
     ),
     rgba(255, 255, 255, 0.035);
-
   text-align: center;
 }
 
 .partner-role {
   margin-bottom: 14px;
-
   color: var(--accent);
-
   font-size: 0.66rem;
   font-weight: 700;
-
   letter-spacing: 0.15em;
 }
 
 .partner-identity h3 {
   margin-bottom: 9px;
-
   font-size: clamp(1.7rem, 4vw, 2.5rem);
 }
 
 .partner-photo-note {
   color: var(--muted);
-
   font-size: 0.75rem;
 }
 
 .partner-copy p {
   color: var(--muted);
-
   font-size: 0.96rem;
-
   line-height: 1.8;
 }
 
@@ -909,11 +674,8 @@ a.secondary:hover {
 
 .text-link {
   display: inline-block;
-
   margin-top: 30px;
-
   color: var(--accent);
-
   font-size: 0.84rem;
   font-weight: 700;
 }
@@ -923,27 +685,16 @@ a.secondary:hover {
 
 .route-grid {
   max-width: 880px;
-
-  margin:
-    0
-    auto;
-
+  margin: 0 auto;
   border-top: 1px solid var(--line);
 }
 
 .route-step {
   display: grid;
-
   grid-template-columns: 68px 1fr;
-
   gap: 24px;
-
-  padding:
-    30px
-    8px;
-
+  padding: 30px 8px;
   border-bottom: 1px solid var(--line);
-
   transition:
     background 0.2s ease,
     padding 0.2s ease;
@@ -952,59 +703,40 @@ a.secondary:hover {
 .route-step:hover {
   padding-left: 16px;
   padding-right: 16px;
-
   background: rgba(255, 255, 255, 0.03);
 }
 
 .route-letter {
   width: 50px;
   height: 50px;
-
   display: grid;
-
   place-items: center;
-
-  border:
-    1px
-    solid
-    rgba(217, 255, 67, 0.34);
-
+  border: 1px solid rgba(217, 255, 67, 0.34);
   border-radius: 50%;
-
   background: var(--accent-soft);
-
   color: var(--accent);
-
   font-family: "Manrope", sans-serif;
-
   font-size: 1.15rem;
   font-weight: 700;
 }
 
 .route-label {
   margin-bottom: 8px;
-
   color: var(--accent);
-
   font-size: 0.66rem;
   font-weight: 700;
-
   letter-spacing: 0.15em;
 }
 
 .route-step h3 {
   margin-bottom: 9px;
-
   font-size: 1.27rem;
 }
 
 .route-step div > p:last-child {
   max-width: 690px;
-
   color: var(--muted);
-
   font-size: 0.9rem;
-
   line-height: 1.72;
 }
 
@@ -1013,21 +745,14 @@ a.secondary:hover {
 
 .global-layout {
   display: grid;
-
-  grid-template-columns:
-    0.75fr
-    1.25fr;
-
+  grid-template-columns: 0.75fr 1.25fr;
   gap: clamp(48px, 8vw, 92px);
-
   align-items: start;
 }
 
 .global-statement {
   color: var(--muted);
-
   font-size: 1rem;
-
   line-height: 1.82;
 }
 
@@ -1041,38 +766,27 @@ a.secondary:hover {
 
 .global-point {
   display: grid;
-
   grid-template-columns: 48px 1fr;
-
   gap: 18px;
-
-  padding:
-    26px
-    0;
-
+  padding: 26px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .global-point > span {
   color: var(--accent);
-
   font-size: 0.68rem;
   font-weight: 700;
-
   letter-spacing: 0.12em;
 }
 
 .global-point h3 {
   margin-bottom: 10px;
-
   font-size: 1.24rem;
 }
 
 .global-point p {
   color: var(--muted);
-
   font-size: 0.88rem;
-
   line-height: 1.72;
 }
 
@@ -1082,14 +796,10 @@ a.secondary:hover {
 
 .reach-label {
   margin-bottom: 8px;
-
   color: var(--accent) !important;
-
   font-size: 0.65rem !important;
   font-weight: 700;
-
   letter-spacing: 0.15em;
-
   text-transform: uppercase;
 }
 
@@ -1103,43 +813,27 @@ a.secondary:hover {
 
 .reach-flow {
   margin-top: 18px;
-
   border-top: 1px solid var(--line);
 }
 
 .reach-item {
   position: relative;
-
   min-height: 54px;
-
   display: flex;
-
   align-items: center;
-
-  padding:
-    11px
-    0
-    11px
-    27px;
-
+  padding: 11px 0 11px 27px;
   border-bottom: 1px solid var(--line);
 }
 
 .reach-item::before {
   content: "";
-
   position: absolute;
-
   left: 3px;
   top: 50%;
-
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: var(--accent);
-
   transform: translateY(-50%);
 }
 
@@ -1149,14 +843,10 @@ a.secondary:hover {
 
 .reach-item strong {
   color: var(--text);
-
   font-family: "Manrope", sans-serif;
-
   font-size: 0.72rem;
   font-weight: 600;
-
   letter-spacing: 0.09em;
-
   text-transform: uppercase;
 }
 
@@ -1165,19 +855,13 @@ a.secondary:hover {
 
 .connect-section {
   display: grid;
-
-  grid-template-columns:
-    1fr
-    0.9fr;
-
+  grid-template-columns: 1fr 0.9fr;
   gap: clamp(50px, 8vw, 96px);
-
   align-items: start;
 }
 
 .connect-heading {
   position: sticky;
-
   top: 28px;
 }
 
@@ -1190,15 +874,9 @@ a.secondary:hover {
 }
 
 .connect-lead {
-  padding:
-    26px
-    0
-    34px;
-
+  padding: 26px 0 34px;
   color: var(--muted);
-
   font-size: 1rem;
-
   line-height: 1.82;
 }
 
@@ -1208,54 +886,39 @@ a.secondary:hover {
 
 .connect-option {
   display: grid;
-
   grid-template-columns: 42px 1fr;
-
   gap: 14px;
-
-  padding:
-    24px
-    0;
-
+  padding: 24px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .connect-option > span {
   color: var(--accent);
-
   font-size: 0.67rem;
   font-weight: 700;
-
   letter-spacing: 0.12em;
 }
 
 .connect-option h3 {
   margin-bottom: 9px;
-
   font-size: 1.16rem;
 }
 
 .connect-option p {
   color: var(--muted);
-
   font-size: 0.87rem;
-
   line-height: 1.7;
 }
 
 .connect-actions {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 12px;
-
   margin-top: 32px;
 }
 
 .connect-actions .button {
   flex: 1;
-
   min-width: 180px;
 }
 
@@ -1264,30 +927,19 @@ a.secondary:hover {
 
 .site-footer {
   min-height: 84px;
-
   margin-top: 18px;
-
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 24px;
-
-  padding:
-    20px
-    28px;
-
+  padding: 20px 28px;
   border-radius: 18px;
-
   color: var(--muted);
-
   font-size: 0.75rem;
 }
 
 .footer-brand {
   font-family: "Manrope", sans-serif;
-
   letter-spacing: 0.1em;
 }
 
@@ -1305,9 +957,7 @@ a.secondary:hover {
   }
 
   .site-header {
-    grid-template-columns:
-      1fr
-      auto;
+    grid-template-columns: 1fr auto;
   }
 
   .hero {
@@ -1320,11 +970,7 @@ a.secondary:hover {
 
   .stat {
     grid-template-columns: 38px 1fr;
-
-    padding:
-      20px
-      0;
-
+    padding: 20px 0;
     border-right: none;
     border-bottom: 1px solid var(--line);
   }
@@ -1350,7 +996,6 @@ a.secondary:hover {
 
   .service-card {
     min-height: auto;
-
     border-right: none;
     border-bottom: 1px solid var(--line);
   }
@@ -1362,7 +1007,6 @@ a.secondary:hover {
   .service-number {
     margin-bottom: 34px;
   }
-
 }
 
 
@@ -1378,13 +1022,9 @@ a.secondary:hover {
   .background-video {
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
-
-    transform:
-      translate(-50%, -50%)
-      scale(1.06);
-
+    object-fit: contain;
+    object-position: center center;
+    transform: translate(-50%, -50%);
     filter:
       brightness(0.76)
       contrast(1.04)
@@ -1404,11 +1044,7 @@ a.secondary:hover {
 
   .site-shell {
     width: calc(100% - 20px);
-
-    padding:
-      10px
-      0
-      24px;
+    padding: 10px 0 24px;
   }
 
   .glass-panel {
@@ -1419,34 +1055,21 @@ a.secondary:hover {
         rgba(255, 255, 255, 0.01)
       ),
       rgba(8, 12, 11, 0.44);
-
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
 
   .section {
     margin-top: 10px;
-
-    padding:
-      58px
-      22px;
+    padding: 58px 22px;
   }
 
   .site-header {
     min-height: 66px;
-
     margin: 0;
-
     gap: 12px;
-
-    padding:
-      10px
-      12px
-      10px
-      16px;
-
+    padding: 10px 12px 10px 16px;
     border-radius: 15px;
-
     background:
       linear-gradient(
         145deg,
@@ -1458,34 +1081,23 @@ a.secondary:hover {
 
   .brand {
     gap: 5px;
-
     font-size: 0.68rem;
   }
 
   .header-coming-soon {
     min-height: 38px;
-
-    padding:
-      0
-      13px;
-
+    padding: 0 13px;
     font-size: 0.61rem;
   }
 
   .hero {
     min-height: 720px;
-
     margin-top: 10px;
-
-    padding:
-      72px
-      22px
-      30px;
+    padding: 72px 22px 30px;
   }
 
   h1 {
     font-size: clamp(3rem, 15vw, 4.8rem);
-
     margin-bottom: 26px;
   }
 
@@ -1499,9 +1111,7 @@ a.secondary:hover {
 
   .actions {
     width: 100%;
-
     flex-direction: column;
-
     margin-top: 32px;
   }
 
@@ -1511,7 +1121,6 @@ a.secondary:hover {
 
   .hero-foundation {
     margin-top: 70px;
-
     padding-top: 25px;
   }
 
@@ -1520,9 +1129,7 @@ a.secondary:hover {
   }
 
   .stat {
-    padding:
-      18px
-      0;
+    padding: 18px 0;
   }
 
   .section-heading,
@@ -1544,7 +1151,6 @@ a.secondary:hover {
 
   .principle {
     grid-template-columns: 38px 1fr;
-
     gap: 12px;
   }
 
@@ -1557,9 +1163,7 @@ a.secondary:hover {
   }
 
   .service-card {
-    padding:
-      28px
-      22px;
+    padding: 28px 22px;
   }
 
   .service-number {
@@ -1572,18 +1176,13 @@ a.secondary:hover {
 
   .partner-layout {
     gap: 30px;
-
-    padding:
-      18px;
-
+    padding: 18px;
     border-radius: 13px;
   }
 
   .partner-identity {
     min-height: 180px;
-
-    padding:
-      22px;
+    padding: 22px;
   }
 
   .partner-copy p {
@@ -1592,12 +1191,8 @@ a.secondary:hover {
 
   .route-step {
     grid-template-columns: 52px 1fr;
-
     gap: 13px;
-
-    padding:
-      25px
-      0;
+    padding: 25px 0;
   }
 
   .route-step:hover {
@@ -1608,7 +1203,6 @@ a.secondary:hover {
   .route-letter {
     width: 43px;
     height: 43px;
-
     font-size: 1rem;
   }
 
@@ -1630,17 +1224,12 @@ a.secondary:hover {
 
   .global-point {
     grid-template-columns: 38px 1fr;
-
     gap: 12px;
-
-    padding:
-      23px
-      0;
+    padding: 23px 0;
   }
 
   .reach-item {
     min-height: 52px;
-
     padding-left: 26px;
   }
 
@@ -1654,7 +1243,6 @@ a.secondary:hover {
 
   .connect-option {
     grid-template-columns: 36px 1fr;
-
     gap: 10px;
   }
 
@@ -1664,29 +1252,19 @@ a.secondary:hover {
 
   .connect-actions .button {
     width: 100%;
-
     min-width: 0;
   }
 
   .site-footer {
     min-height: 100px;
-
     margin-top: 10px;
-
     flex-direction: column;
-
     justify-content: center;
-
     gap: 5px;
-
-    padding:
-      20px;
-
+    padding: 20px;
     text-align: center;
-
     border-radius: 15px;
   }
-
 }
 
 
@@ -1707,5 +1285,4 @@ a.secondary:hover {
   .background-video {
     display: none;
   }
-
 }
