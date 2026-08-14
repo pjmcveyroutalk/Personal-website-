@@ -28,23 +28,21 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
 }
 
 body {
   min-height: 100vh;
+  min-height: 100dvh;
+
   color: var(--text);
+
   font-family: "Inter", sans-serif;
   line-height: 1.65;
+
   overflow-x: hidden;
 
-  background:
-    linear-gradient(
-      180deg,
-      #123f4b 0%,
-      #245a68 34%,
-      #526c66 68%,
-      #162f34 100%
-    );
+  background: var(--bg);
 }
 
 a {
@@ -68,44 +66,52 @@ a {
 .site-background {
   position: fixed;
   inset: 0;
+
   z-index: -10;
-  width: 100%;
-  height: 100%;
+
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+
+  min-width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
   overflow: hidden;
+
+  border: 0;
+  border-radius: 0;
+
   pointer-events: none;
 
-  background:
-    radial-gradient(
-      circle at 30% 18%,
-      rgba(225, 210, 129, 0.34),
-      transparent 34%
-    ),
-    radial-gradient(
-      circle at 82% 40%,
-      rgba(93, 153, 173, 0.34),
-      transparent 36%
-    ),
-    linear-gradient(
-      180deg,
-      #16495a 0%,
-      #2d6574 38%,
-      #6d7763 70%,
-      #17353a 100%
-    );
+  background: #061015;
 }
 
 .background-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 0;
 
   width: 100%;
   height: 100%;
 
-  object-fit: contain;
+  min-width: 100%;
+  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  display: block;
+
+  border: 0;
+  border-radius: 0;
+
+  object-fit: cover;
   object-position: center center;
 
-  transform: translate(-50%, -50%);
+  transform: none;
 
   filter:
     brightness(0.94)
@@ -119,13 +125,22 @@ a {
   position: absolute;
   inset: 0;
 
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
   background:
     linear-gradient(
       180deg,
-      rgba(3, 16, 21, 0.08) 0%,
-      rgba(3, 18, 22, 0.04) 30%,
-      rgba(4, 20, 21, 0.08) 65%,
-      rgba(2, 12, 15, 0.18) 100%
+      rgba(3, 16, 21, 0.05) 0%,
+      rgba(3, 18, 22, 0.02) 30%,
+      rgba(4, 20, 21, 0.05) 65%,
+      rgba(2, 12, 15, 0.14) 100%
     );
 
   pointer-events: none;
@@ -170,8 +185,10 @@ a {
 
 .glass-panel::before {
   content: "";
+
   position: absolute;
   inset: 0;
+
   z-index: 0;
 
   background:
@@ -223,7 +240,9 @@ h1 span {
 
 h2 {
   max-width: 800px;
+
   font-size: clamp(2.3rem, 5.5vw, 4.7rem);
+
   letter-spacing: -0.052em;
 }
 
@@ -249,7 +268,9 @@ h3 {
 
 .centered-heading {
   max-width: 880px;
+
   margin: 0 auto 54px;
+
   text-align: center;
 }
 
@@ -264,6 +285,7 @@ h3 {
   margin: 24px auto 0;
 
   color: var(--muted);
+
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -305,7 +327,9 @@ a.button:hover {
 
 .secondary {
   background: rgba(255, 255, 255, 0.035);
+
   border: 1px solid rgba(255, 255, 255, 0.34);
+
   color: var(--text);
 }
 
@@ -342,6 +366,7 @@ a.button:hover {
 
   font-family: "Manrope", sans-serif;
   font-size: 0.78rem;
+
   letter-spacing: 0.13em;
 }
 
@@ -374,8 +399,11 @@ a.button:hover {
 
 .header-coming-soon {
   min-height: 44px;
+
   padding: 0 18px;
+
   font-size: 0.7rem;
+
   cursor: default;
 }
 
@@ -481,6 +509,7 @@ a.button:hover {
 
   font-size: 0.7rem;
   font-weight: 700;
+
   letter-spacing: 0.12em;
 }
 
@@ -519,6 +548,7 @@ a.button:hover {
 
 .about-layout {
   display: grid;
+
   grid-template-columns: 1fr 0.9fr;
 
   gap: clamp(48px, 8vw, 92px);
@@ -528,6 +558,7 @@ a.button:hover {
 
 .about-copy {
   color: var(--muted);
+
   font-size: 1rem;
   line-height: 1.82;
 }
@@ -542,6 +573,7 @@ a.button:hover {
 
 .principle {
   display: grid;
+
   grid-template-columns: 44px 1fr;
 
   gap: 18px;
@@ -553,17 +585,20 @@ a.button:hover {
 
 .principle > span {
   color: var(--accent);
+
   font-size: 0.68rem;
   font-weight: 700;
 }
 
 .principle h3 {
   margin-bottom: 9px;
+
   font-size: 1.18rem;
 }
 
 .principle p {
   color: var(--muted);
+
   font-size: 0.87rem;
   line-height: 1.7;
 }
@@ -590,6 +625,7 @@ a.button:hover {
 
 .about-signature span {
   color: var(--muted);
+
   font-size: 0.78rem;
 }
 
@@ -598,6 +634,7 @@ a.button:hover {
 
 .services {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
   border: 1px solid var(--line-soft);
@@ -633,11 +670,13 @@ a.button:hover {
 
 .service-card h3 {
   margin-bottom: 18px;
+
   font-size: 1.55rem;
 }
 
 .service-card p {
   color: var(--muted);
+
   font-size: 0.9rem;
   line-height: 1.75;
 }
@@ -647,7 +686,9 @@ a.button:hover {
 
 .partner-heading {
   max-width: 790px;
+
   margin: 0 auto 56px;
+
   text-align: center;
 }
 
@@ -657,13 +698,17 @@ a.button:hover {
 
 .partner-heading > p:last-child {
   max-width: 620px;
+
   margin: 24px auto 0;
+
   color: var(--muted);
+
   line-height: 1.8;
 }
 
 .partner-layout {
   display: grid;
+
   grid-template-columns: 0.8fr 1.2fr;
 
   gap: clamp(44px, 8vw, 94px);
@@ -714,16 +759,19 @@ a.button:hover {
 
 .partner-identity h3 {
   margin-bottom: 9px;
+
   font-size: clamp(1.7rem, 4vw, 2.5rem);
 }
 
 .partner-photo-note {
   color: var(--muted);
+
   font-size: 0.75rem;
 }
 
 .partner-copy p {
   color: var(--muted);
+
   font-size: 0.96rem;
   line-height: 1.8;
 }
@@ -734,6 +782,7 @@ a.button:hover {
 
 .text-link {
   display: inline-block;
+
   margin-top: 30px;
 
   color: var(--accent);
@@ -747,6 +796,7 @@ a.button:hover {
 
 .route-grid {
   max-width: 880px;
+
   margin: 0 auto;
 
   border-top: 1px solid var(--line-soft);
@@ -754,6 +804,7 @@ a.button:hover {
 
 .route-step {
   display: grid;
+
   grid-template-columns: 68px 1fr;
 
   gap: 24px;
@@ -795,6 +846,7 @@ a.button:hover {
 
 .route-step h3 {
   margin-bottom: 9px;
+
   font-size: 1.27rem;
 }
 
@@ -812,6 +864,7 @@ a.button:hover {
 
 .global-layout {
   display: grid;
+
   grid-template-columns: 0.75fr 1.25fr;
 
   gap: clamp(48px, 8vw, 92px);
@@ -821,6 +874,7 @@ a.button:hover {
 
 .global-statement {
   color: var(--muted);
+
   font-size: 1rem;
   line-height: 1.82;
 }
@@ -835,6 +889,7 @@ a.button:hover {
 
 .global-point {
   display: grid;
+
   grid-template-columns: 48px 1fr;
 
   gap: 18px;
@@ -846,17 +901,20 @@ a.button:hover {
 
 .global-point > span {
   color: var(--accent);
+
   font-size: 0.68rem;
   font-weight: 700;
 }
 
 .global-point h3 {
   margin-bottom: 10px;
+
   font-size: 1.24rem;
 }
 
 .global-point p {
   color: var(--muted);
+
   font-size: 0.88rem;
   line-height: 1.72;
 }
@@ -887,6 +945,7 @@ a.button:hover {
 
 .reach-flow {
   margin-top: 18px;
+
   border-top: 1px solid var(--line-soft);
 }
 
@@ -907,6 +966,7 @@ a.button:hover {
   content: "";
 
   position: absolute;
+
   left: 3px;
   top: 50%;
 
@@ -941,6 +1001,7 @@ a.button:hover {
 
 .connect-section {
   display: grid;
+
   grid-template-columns: 1fr 0.9fr;
 
   gap: clamp(50px, 8vw, 96px);
@@ -976,6 +1037,7 @@ a.button:hover {
 
 .connect-option {
   display: grid;
+
   grid-template-columns: 42px 1fr;
 
   gap: 14px;
@@ -987,17 +1049,20 @@ a.button:hover {
 
 .connect-option > span {
   color: var(--accent);
+
   font-size: 0.67rem;
   font-weight: 700;
 }
 
 .connect-option h3 {
   margin-bottom: 9px;
+
   font-size: 1.16rem;
 }
 
 .connect-option p {
   color: var(--muted);
+
   font-size: 0.87rem;
   line-height: 1.7;
 }
@@ -1013,6 +1078,7 @@ a.button:hover {
 
 .connect-actions .button {
   flex: 1;
+
   min-width: 180px;
 }
 
@@ -1035,11 +1101,13 @@ a.button:hover {
   border-radius: 20px;
 
   color: var(--muted);
+
   font-size: 0.75rem;
 }
 
 .footer-brand {
   font-family: "Manrope", sans-serif;
+
   letter-spacing: 0.1em;
 }
 
@@ -1113,34 +1181,32 @@ a.button:hover {
   }
 
   .site-background {
-    background:
-      radial-gradient(
-        circle at 25% 15%,
-        rgba(218, 207, 139, 0.38),
-        transparent 35%
-      ),
-      radial-gradient(
-        circle at 78% 42%,
-        rgba(87, 151, 171, 0.42),
-        transparent 40%
-      ),
-      linear-gradient(
-        180deg,
-        #1a5061 0%,
-        #397384 38%,
-        #7d8065 70%,
-        #17383d 100%
-      );
+    width: 100vw;
+
+    height: 100vh;
+    height: 100dvh;
+
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background: #061015;
   }
 
   .background-video {
+    position: absolute;
+    inset: 0;
+
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    min-width: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
     object-position: center center;
 
-    transform: translate(-50%, -50%);
+    transform: none;
 
     filter:
       brightness(0.98)
@@ -1160,6 +1226,7 @@ a.button:hover {
 
   .site-shell {
     width: calc(100% - 24px);
+
     padding: 12px 0 28px;
   }
 
@@ -1180,6 +1247,7 @@ a.button:hover {
 
   .section {
     margin-top: 18px;
+
     padding: 58px 24px;
   }
 
@@ -1305,6 +1373,7 @@ a.button:hover {
 
   .principle {
     grid-template-columns: 38px 1fr;
+
     gap: 12px;
   }
 
@@ -1322,11 +1391,13 @@ a.button:hover {
 
   .partner-layout {
     gap: 30px;
+
     padding: 18px;
   }
 
   .partner-identity {
     min-height: 180px;
+
     padding: 22px;
   }
 
@@ -1345,6 +1416,7 @@ a.button:hover {
   .route-letter {
     width: 43px;
     height: 43px;
+
     font-size: 1rem;
   }
 
@@ -1374,6 +1446,7 @@ a.button:hover {
 
   .reach-item {
     min-height: 52px;
+
     padding-left: 26px;
   }
 
@@ -1387,6 +1460,7 @@ a.button:hover {
 
   .connect-option {
     grid-template-columns: 36px 1fr;
+
     gap: 10px;
   }
 
@@ -1396,6 +1470,7 @@ a.button:hover {
 
   .connect-actions .button {
     width: 100%;
+
     min-width: 0;
   }
 
