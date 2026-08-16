@@ -626,6 +626,10 @@ line-height:1.62
 
 /* ABOUT */
 
+.about-section{
+padding-bottom:clamp(46px,6vw,68px)
+}
+
 .about-section .section-heading{
 max-width:760px;
 text-align:center;
@@ -686,25 +690,69 @@ font-size:.9rem;
 line-height:1.72
 }
 
+
+/* ABOUT IDENTITY */
+
 .about-signature{
-display:flex;
-flex-direction:column;
+position:relative;
+display:grid;
+grid-template-columns:auto 1fr;
 align-items:center;
-gap:6px;
-margin-top:54px;
-padding-top:28px;
-border-top:1px solid var(--line-soft);
-text-align:center
+column-gap:22px;
+row-gap:4px;
+margin-top:38px;
+padding:25px 28px 25px 34px;
+border-top:1px solid rgba(78,255,230,.24);
+border-bottom:1px solid rgba(78,255,230,.11);
+background:
+linear-gradient(
+90deg,
+rgba(78,255,230,.055),
+rgba(78,255,230,.012) 36%,
+transparent 72%
+);
+text-align:left
+}
+
+.about-signature::before{
+content:"";
+position:absolute;
+left:0;
+top:22px;
+bottom:22px;
+width:3px;
+border-radius:8px;
+background:var(--accent);
+box-shadow:0 0 14px rgba(78,255,230,.36)
 }
 
 .about-signature strong{
+grid-row:1 / span 2;
+align-self:center;
+min-width:max-content;
+color:#fff;
 font-family:"Manrope",sans-serif;
-font-size:1.1rem
+font-size:1.25rem;
+font-weight:700;
+letter-spacing:-.02em
 }
 
 .about-signature span{
-color:#eef5f4;
-font-size:.8rem
+color:#dce8e7;
+font-size:.82rem;
+line-height:1.5
+}
+
+.about-signature span::after{
+content:"Communication  →  Strategy  →  Technology";
+display:block;
+margin-top:5px;
+color:var(--accent);
+font-family:"Manrope",sans-serif;
+font-size:.64rem;
+font-weight:700;
+letter-spacing:.11em;
+text-transform:uppercase
 }
 
 
@@ -1437,15 +1485,14 @@ line-height:1.6
 }
 
 
-/* MOBILE CONTENT */
+/* MOBILE ABOUT */
 
-.section-heading,
-.centered-heading{
-margin-bottom:36px
+.about-section{
+padding-bottom:36px
 }
 
 .about-layout{
-gap:36px
+gap:34px
 }
 
 .about-copy,
@@ -1456,6 +1503,42 @@ font-size:.96rem
 .principle{
 grid-template-columns:38px 1fr;
 gap:12px
+}
+
+.about-signature{
+grid-template-columns:1fr;
+gap:4px;
+margin-top:26px;
+padding:20px 18px 20px 25px;
+text-align:left
+}
+
+.about-signature::before{
+top:17px;
+bottom:17px
+}
+
+.about-signature strong{
+grid-row:auto;
+font-size:1.15rem
+}
+
+.about-signature span{
+font-size:.78rem
+}
+
+.about-signature span::after{
+margin-top:7px;
+font-size:.58rem;
+letter-spacing:.09em
+}
+
+
+/* MOBILE CONTENT */
+
+.section-heading,
+.centered-heading{
+margin-bottom:36px
 }
 
 .services{
@@ -1610,6 +1693,10 @@ font-size:.82rem
 font-size:.84rem
 }
 
+.about-signature{
+padding-left:22px
+}
+
 }
 
 
@@ -1620,11 +1707,6 @@ font-size:.84rem
 html{
 scroll-behavior:auto
 }
-
-/*
-Keep the cinematic background alive.
-Only interface transitions are reduced.
-*/
 
 .menu-toggle span,
 .mobile-menu,
