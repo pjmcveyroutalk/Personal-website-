@@ -30,6 +30,7 @@ autoplay muted loop playsinline preload="auto">
 <div class="background-overlay"></div>
 </div>
 
+
 <main id="top" class="site-shell">
 
 <header class="glass-panel site-header">
@@ -47,9 +48,41 @@ autoplay muted loop playsinline preload="auto">
 <a href="#connect">Connect</a>
 </nav>
 
+<div class="header-actions">
+
 <span class="button primary header-coming-soon" aria-disabled="true">
 Routalk Coming Soon
 </span>
+
+<button
+class="menu-toggle"
+type="button"
+aria-label="Open navigation menu"
+aria-expanded="false"
+aria-controls="mobile-menu"
+>
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
+
+<nav
+id="mobile-menu"
+class="mobile-menu"
+aria-label="Mobile navigation"
+aria-hidden="true"
+>
+
+<a href="#about">About</a>
+<a href="#work">Work</a>
+<a href="#route">Route</a>
+<a href="#global">Global</a>
+<a href="#connect">Connect</a>
+
+</nav>
 
 </header>
 
@@ -90,7 +123,7 @@ Start a conversation
 </section>
 
 
-<section class="glass-panel foundation-panel">
+<section class="glass-panel foundation-panel content-glass">
 
 <p class="eyebrow">
 THE FOUNDATION
@@ -147,7 +180,7 @@ Understand the problem before deciding what should be built
 </section>
 
 
-<section id="about" class="glass-panel section about-section">
+<section id="about" class="glass-panel content-glass section about-section">
 
 <div class="section-heading">
 
@@ -204,16 +237,12 @@ understand it first, then build with purpose.
 <span>01</span>
 
 <div>
-
-<h3>
-Clear communication
-</h3>
+<h3>Clear communication</h3>
 
 <p>
 Understand the problem, ask the right questions and make the
 direction understandable before development begins.
 </p>
-
 </div>
 
 </article>
@@ -224,16 +253,12 @@ direction understandable before development begins.
 <span>02</span>
 
 <div>
-
-<h3>
-Purpose before appearance
-</h3>
+<h3>Purpose before appearance</h3>
 
 <p>
 Good design should help people understand, trust and use the
 experience instead of existing only to look impressive.
 </p>
-
 </div>
 
 </article>
@@ -244,16 +269,12 @@ experience instead of existing only to look impressive.
 <span>03</span>
 
 <div>
-
-<h3>
-Build what is needed
-</h3>
+<h3>Build what is needed</h3>
 
 <p>
 The answer is not automatically a website. The outcome should
 determine the technology.
 </p>
-
 </div>
 
 </article>
@@ -278,7 +299,7 @@ One of the founders of Routalk Build · Milwaukee
 </section>
 
 
-<section id="work" class="glass-panel section work-section">
+<section id="work" class="glass-panel content-glass section work-section">
 
 <div class="section-heading centered-heading">
 
@@ -307,9 +328,7 @@ will make that outcome easier to reach.
 01
 </span>
 
-<h3>
-Websites
-</h3>
+<h3>Websites</h3>
 
 <p>
 For businesses that need a stronger first impression, clearer
@@ -327,9 +346,7 @@ a clear reason to take the next step.
 02
 </span>
 
-<h3>
-Digital Products
-</h3>
+<h3>Digital Products</h3>
 
 <p>
 Dashboards, interfaces, forms, internal tools and custom digital
@@ -363,7 +380,7 @@ understands what is being created and why.
 </section>
 
 
-<section class="glass-panel section partner-section">
+<section class="glass-panel content-glass section partner-section">
 
 <div class="partner-heading">
 
@@ -421,7 +438,8 @@ product can actually be designed, engineered and brought to life.
 href="https://www.brazdil.pro"
 target="_blank"
 rel="noopener"
-class="text-link">
+class="text-link"
+>
 View Gabriel's technical portfolio →
 </a>
 
@@ -432,7 +450,7 @@ View Gabriel's technical portfolio →
 </section>
 
 
-<section id="route" class="glass-panel section route-section">
+<section id="route" class="glass-panel content-glass section route-section">
 
 <div class="section-heading centered-heading">
 
@@ -457,9 +475,7 @@ the plan into technology and execute with everyone aligned.
 
 <article class="route-step">
 
-<span class="route-letter">
-R
-</span>
+<span class="route-letter">R</span>
 
 <div>
 
@@ -483,9 +499,7 @@ before deciding what should be built.
 
 <article class="route-step">
 
-<span class="route-letter">
-O
-</span>
+<span class="route-letter">O</span>
 
 <div>
 
@@ -509,9 +523,7 @@ so the project has a clear direction from the start.
 
 <article class="route-step">
 
-<span class="route-letter">
-U
-</span>
+<span class="route-letter">U</span>
 
 <div>
 
@@ -535,9 +547,7 @@ understand, trust and use what is being created.
 
 <article class="route-step">
 
-<span class="route-letter">
-T
-</span>
+<span class="route-letter">T</span>
 
 <div>
 
@@ -561,9 +571,7 @@ applications, tools and digital products.
 
 <article class="route-step">
 
-<span class="route-letter">
-E
-</span>
+<span class="route-letter">E</span>
 
 <div>
 
@@ -589,7 +597,7 @@ from the first conversation through the working product.
 </section>
 
 
-<section id="global" class="glass-panel section global-section">
+<section id="global" class="glass-panel content-glass section global-section">
 
 <div class="section-heading centered-heading">
 
@@ -739,7 +747,7 @@ Milwaukee is home. The work does not have to be.
 </section>
 
 
-<section id="connect" class="glass-panel section connect-section">
+<section id="connect" class="glass-panel content-glass section connect-section">
 
 <div class="connect-heading">
 
@@ -812,13 +820,15 @@ digital product, workflow improvement or something simpler.
 
 <a
 href="mailto:pjmcvey.routalk@gmail.com?subject=Routalk%20Build%20Project%20Inquiry"
-class="button primary">
+class="button primary"
+>
 Email Patrick
 </a>
 
 <span
 class="button secondary"
-aria-disabled="true">
+aria-disabled="true"
+>
 Routalk · Coming Soon
 </span>
 
@@ -829,7 +839,7 @@ Routalk · Coming Soon
 </section>
 
 
-<footer class="glass-panel site-footer">
+<footer class="glass-panel content-glass site-footer">
 
 <span class="footer-brand">
 <strong>ROUTALK</strong> BUILD
