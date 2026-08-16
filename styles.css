@@ -45,7 +45,8 @@ isolation:isolate
 }
 
 img,
-video{
+video,
+svg{
 max-width:100%
 }
 
@@ -541,11 +542,11 @@ line-height:1
 
 .foundation-panel{
 margin-top:28px;
-padding:18px 30px;
+padding:10px 42px;
 background:
 linear-gradient(145deg,rgba(78,255,230,.022),rgba(255,255,255,.006)),
-rgba(4,16,21,.9);
-border-color:rgba(133,255,244,.44)
+rgba(4,16,21,.91);
+border-color:rgba(133,255,244,.42)
 }
 
 .foundation-list{
@@ -555,65 +556,67 @@ grid-template-columns:repeat(3,1fr)
 
 .foundation-item{
 display:grid;
-grid-template-columns:78px 1fr;
-gap:20px;
-align-items:center;
-padding:28px 30px;
+grid-template-columns:58px minmax(0,1fr);
+gap:18px;
+align-items:start;
+padding:30px 28px;
 border-right:1px solid var(--line-soft)
 }
 
 .foundation-item:first-child{
-padding-left:10px
+padding-left:0
 }
 
 .foundation-item:last-child{
-padding-right:10px;
-border-right:none
+padding-right:0;
+border-right:0
 }
 
 .foundation-icon{
-width:68px;
-height:68px;
-display:grid;
-place-items:center;
-color:var(--accent);
-border:1px solid rgba(78,255,230,.28);
-border-radius:50%;
-background:
-radial-gradient(circle,rgba(78,255,230,.09),rgba(78,255,230,.015) 64%,transparent 65%);
-box-shadow:
-0 0 24px rgba(78,255,230,.06),
-inset 0 0 18px rgba(78,255,230,.035)
+width:52px;
+height:52px;
+display:flex;
+align-items:flex-start;
+justify-content:flex-start;
+color:var(--accent)
 }
 
 .foundation-icon svg{
+display:block;
 width:48px;
 height:48px;
-display:block
+max-width:48px;
+max-height:48px;
+overflow:visible
+}
+
+.foundation-icon svg *{
+vector-effect:non-scaling-stroke
 }
 
 .foundation-number{
 display:block;
-margin-bottom:4px;
+margin:1px 0 7px;
 color:var(--accent);
 font-family:"Manrope",sans-serif;
-font-size:.76rem;
+font-size:.72rem;
 font-weight:700;
 letter-spacing:.14em
 }
 
 .foundation-copy h3{
 margin-bottom:10px;
-font-size:1rem;
+font-size:.94rem;
+line-height:1.2;
 font-weight:700;
 letter-spacing:.13em
 }
 
 .foundation-copy p{
-max-width:360px;
-color:#e5eeed;
-font-size:.88rem;
-line-height:1.65
+max-width:320px;
+color:#e7efee;
+font-size:.86rem;
+line-height:1.62
 }
 
 
@@ -1114,25 +1117,46 @@ display:flex!important
 display:flex
 }
 
+
+/* FOUNDATION TABLET */
+
+.foundation-panel{
+padding:8px 34px
+}
+
 .foundation-list{
 grid-template-columns:1fr
 }
 
 .foundation-item{
-grid-template-columns:84px 1fr;
-padding:28px 8px;
-border-right:none;
+grid-template-columns:62px minmax(0,1fr);
+gap:20px;
+padding:28px 4px;
+border-right:0;
 border-bottom:1px solid var(--line-soft)
 }
 
 .foundation-item:first-child{
-padding-left:8px
+padding-left:4px
 }
 
 .foundation-item:last-child{
-padding-right:8px;
-border-bottom:none
+padding-right:4px;
+border-bottom:0
 }
+
+.foundation-icon{
+width:54px;
+height:54px
+}
+
+.foundation-icon svg{
+width:50px;
+height:50px;
+max-width:50px;
+max-height:50px
+}
+
 
 .about-layout,
 .partner-layout,
@@ -1323,7 +1347,7 @@ font-size:1.5rem
 
 .foundation-panel{
 margin-top:24px;
-padding:14px 30px;
+padding:8px 30px;
 background:
 linear-gradient(145deg,rgba(78,255,230,.018),rgba(255,255,255,.004)),
 rgba(4,16,21,.91);
@@ -1331,9 +1355,11 @@ border-color:rgba(133,255,244,.43)
 }
 
 .foundation-item{
-grid-template-columns:76px 1fr;
-gap:20px;
-padding:28px 0
+grid-template-columns:58px minmax(0,1fr);
+gap:18px;
+align-items:start;
+padding:26px 0;
+border-bottom:1px solid rgba(78,255,230,.16)
 }
 
 .foundation-item:first-child{
@@ -1341,33 +1367,41 @@ padding-left:0
 }
 
 .foundation-item:last-child{
-padding-right:0
+padding-right:0;
+border-bottom:0
 }
 
 .foundation-icon{
-width:68px;
-height:68px
+width:52px;
+height:52px;
+padding-top:2px
 }
 
 .foundation-icon svg{
 width:48px;
-height:48px
+height:48px;
+max-width:48px;
+max-height:48px
 }
 
 .foundation-number{
-margin-bottom:5px;
-font-size:.8rem
+margin:0 0 5px;
+font-size:.75rem;
+line-height:1.1
 }
 
 .foundation-copy h3{
-margin-bottom:8px;
-font-size:.92rem;
-letter-spacing:.14em
+margin-bottom:7px;
+font-size:.9rem;
+line-height:1.2;
+letter-spacing:.13em
 }
 
 .foundation-copy p{
-font-size:.88rem;
-line-height:1.63
+max-width:none;
+color:#e7efee;
+font-size:.89rem;
+line-height:1.6
 }
 
 
@@ -1514,27 +1548,30 @@ gap:7px
 }
 
 .foundation-panel{
-padding-left:20px;
-padding-right:20px
+padding-left:22px;
+padding-right:22px
 }
 
 .foundation-item{
-grid-template-columns:64px 1fr;
-gap:14px
+grid-template-columns:52px minmax(0,1fr);
+gap:14px;
+padding:23px 0
 }
 
 .foundation-icon{
-width:58px;
-height:58px
+width:46px;
+height:46px
 }
 
 .foundation-icon svg{
-width:40px;
-height:40px
+width:42px;
+height:42px;
+max-width:42px;
+max-height:42px
 }
 
 .foundation-copy h3{
-font-size:.84rem
+font-size:.82rem
 }
 
 .foundation-copy p{
