@@ -243,4 +243,51 @@ h1{margin:0 0 26px;font-size:clamp(2.55rem,11.5vw,3.65rem);line-height:.97;lette
 .team-bridge{gap:8px;margin-top:26px;padding:17px 8px;font-size:.53rem;letter-spacing:.075em}
 }
 
-/* Patrick-f
+/* Patrick-first Routalk Build team hierarchy */
+.team-section .team-grid{
+grid-template-columns:repeat(2,minmax(0,1fr));
+max-width:980px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.team-section .team-card-primary{
+grid-column:1/-1;
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+border-color:rgba(78,255,230,.40);
+background:linear-gradient(135deg,rgba(78,255,230,.08),transparent 38%),rgba(3,14,18,.86);
+box-shadow:0 22px 55px rgba(0,0,0,.24),inset 0 1px 0 rgba(78,255,230,.10);
+}
+
+.team-section .team-card-primary::before{
+height:3px;
+background:linear-gradient(90deg,var(--accent),rgba(78,255,230,.72),rgba(78,255,230,.12));
+}
+
+.team-section .team-card-primary .team-card-top{
+border-bottom:0;
+border-right:1px solid var(--line-soft);
+padding:38px 34px;
+}
+
+.team-section .team-card-primary .team-copy{
+display:flex;
+align-items:center;
+padding:38px 40px;
+}
+
+.team-section .team-card-primary h3{
+font-size:clamp(2rem,4vw,3rem);
+}
+
+.team-section .team-card-support{
+background:linear-gradient(145deg,rgba(78,255,230,.018),transparent 34%),rgba(3,14,18,.68);
+}
+
+@media(max-width:720px){
+.team-section .team-grid{grid-template-columns:1fr}
+.team-section .team-card-primary{grid-column:auto;display:block}
+.team-section .team-card-primary .team-card-top{border-right:0;border-bottom:1px solid var(--line-soft);padding:30px 28px 27px}
+.team-section .team-card-primary .team-copy{display:block;padding:27px 28px 30px}
+}
