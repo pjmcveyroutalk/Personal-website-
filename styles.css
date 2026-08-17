@@ -754,8 +754,8 @@ line-height:1.8
 
 .team-grid{
 display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:20px
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:18px
 }
 
 .team-card{
@@ -784,13 +784,13 @@ transparent
 }
 
 .team-card-top{
-padding:34px 34px 30px;
+padding:30px 28px 27px;
 border-bottom:1px solid var(--line-soft)
 }
 
 .team-number{
 display:block;
-margin-bottom:34px;
+margin-bottom:30px;
 color:var(--accent);
 font-family:"Manrope",sans-serif;
 font-size:.7rem;
@@ -801,30 +801,30 @@ letter-spacing:.14em
 .team-role{
 margin-bottom:10px;
 color:var(--accent);
-font-size:.68rem;
+font-size:.64rem;
 font-weight:700;
-letter-spacing:.15em
+letter-spacing:.13em
 }
 
 .team-card h3{
 margin-bottom:12px;
-font-size:clamp(1.8rem,4vw,2.5rem)
+font-size:clamp(1.65rem,3vw,2.25rem)
 }
 
 .team-skills{
 color:#e8f1f0;
-font-size:.82rem;
+font-size:.78rem;
 line-height:1.65
 }
 
 .team-copy{
-padding:30px 34px 34px
+padding:27px 28px 30px
 }
 
 .team-copy p{
 color:#f1f6f5;
-font-size:.94rem;
-line-height:1.8
+font-size:.9rem;
+line-height:1.76
 }
 
 .team-copy p+p{
@@ -844,15 +844,15 @@ display:flex;
 align-items:center;
 justify-content:center;
 flex-wrap:wrap;
-gap:14px;
+gap:12px;
 margin-top:34px;
-padding:19px 24px;
+padding:19px 20px;
 border-top:1px solid var(--line-soft);
 border-bottom:1px solid var(--line-soft);
 font-family:"Manrope",sans-serif;
-font-size:.72rem;
+font-size:.66rem;
 font-weight:700;
-letter-spacing:.13em;
+letter-spacing:.11em;
 text-transform:uppercase
 }
 
@@ -1420,317 +1420,4 @@ font-size:1.5rem
 
 /* MOBILE FOUNDATION */
 
-.foundation-panel{
-margin-top:24px;
-padding:8px 30px;
-background:
-linear-gradient(145deg,rgba(78,255,230,.018),rgba(255,255,255,.004)),
-rgba(4,16,21,.91);
-border-color:rgba(133,255,244,.43)
-}
-
-.foundation-item{
-grid-template-columns:58px minmax(0,1fr);
-gap:18px;
-align-items:start;
-padding:26px 0;
-border-bottom:1px solid rgba(78,255,230,.16)
-}
-
-.foundation-item:first-child{
-padding-left:0
-}
-
-.foundation-item:last-child{
-padding-right:0;
-border-bottom:0
-}
-
-.foundation-icon{
-width:52px;
-height:52px;
-padding-top:2px
-}
-
-.foundation-icon svg{
-width:48px;
-height:48px;
-max-width:48px;
-max-height:48px
-}
-
-.foundation-number{
-margin:0 0 5px;
-font-size:.75rem;
-line-height:1.1
-}
-
-.foundation-copy h3{
-margin-bottom:7px;
-font-size:.9rem;
-line-height:1.2;
-letter-spacing:.13em
-}
-
-.foundation-copy p{
-max-width:none;
-color:#e7efee;
-font-size:.89rem;
-line-height:1.6
-}
-
-
-/* MOBILE ABOUT */
-
-.about-section{
-padding-bottom:40px
-}
-
-.about-layout{
-gap:34px
-}
-
-.about-copy,
-.about-copy p{
-font-size:.96rem
-}
-
-.principle{
-grid-template-columns:38px 1fr;
-gap:12px
-}
-
-
-/* MOBILE TEAM */
-
-.team-heading{
-margin-bottom:34px
-}
-
-.team-heading h2{
-font-size:clamp(2.45rem,11vw,3.6rem)
-}
-
-.team-heading>p:last-child{
-font-size:.95rem
-}
-
-.team-grid{
-gap:16px
-}
-
-.team-card{
-border-radius:18px
-}
-
-.team-card-top{
-padding:28px 25px 25px
-}
-
-.team-number{
-margin-bottom:28px;
-font-size:.7rem
-}
-
-.team-role{
-font-size:.64rem;
-letter-spacing:.14em
-}
-
-.team-card h3{
-font-size:2rem
-}
-
-.team-skills{
-font-size:.78rem
-}
-
-.team-copy{
-padding:25px
-}
-
-.team-copy p{
-font-size:.91rem;
-line-height:1.75
-}
-
-.team-bridge{
-gap:9px;
-margin-top:26px;
-padding:17px 10px;
-font-size:.59rem;
-letter-spacing:.09em
-}
-
-
-/* MOBILE CONTENT */
-
-.section-heading,
-.centered-heading{
-margin-bottom:36px
-}
-
-.services{
-border-radius:14px
-}
-
-.service-card{
-padding:26px 22px
-}
-
-.service-number{
-margin-bottom:28px
-}
-
-.route-step{
-grid-template-columns:52px 1fr;
-gap:13px;
-padding:23px 0
-}
-
-.route-letter{
-width:43px;
-height:43px;
-font-size:1rem
-}
-
-.route-step h3{
-font-size:1.12rem
-}
-
-.route-step div>p:last-child{
-font-size:.89rem
-}
-
-.global-layout{
-gap:34px
-}
-
-.global-statement,
-.global-statement p{
-font-size:.96rem
-}
-
-.global-point{
-grid-template-columns:38px 1fr;
-gap:12px;
-padding:22px 0
-}
-
-.connect-section{
-gap:34px
-}
-
-.connect-lead{
-font-size:.96rem
-}
-
-.connect-option{
-grid-template-columns:36px 1fr;
-gap:10px
-}
-
-.connect-actions{
-flex-direction:column
-}
-
-.connect-actions .button{
-width:100%;
-min-width:0
-}
-
-.site-footer{
-min-height:94px;
-flex-direction:column;
-justify-content:center;
-gap:5px;
-padding:18px;
-text-align:center
-}
-
-}
-
-
-/* VERY SMALL PHONES */
-
-@media(max-width:380px){
-
-.brand{
-gap:8px;
-font-size:.61rem
-}
-
-.brand img{
-width:52px!important;
-height:52px!important;
-min-width:52px;
-flex:0 0 52px!important
-}
-
-.hero{
-padding-left:22px;
-padding-right:22px
-}
-
-.hero-mini-nav{
-font-size:.58rem;
-gap:7px
-}
-
-.foundation-panel{
-padding-left:22px;
-padding-right:22px
-}
-
-.foundation-item{
-grid-template-columns:52px minmax(0,1fr);
-gap:14px;
-padding:23px 0
-}
-
-.foundation-icon{
-width:46px;
-height:46px
-}
-
-.foundation-icon svg{
-width:42px;
-height:42px;
-max-width:42px;
-max-height:42px
-}
-
-.foundation-copy h3{
-font-size:.82rem
-}
-
-.foundation-copy p{
-font-size:.84rem
-}
-
-.team-card h3{
-font-size:1.75rem
-}
-
-.team-bridge{
-font-size:.54rem
-}
-
-}
-
-
-/* REDUCED MOTION */
-
-@media(prefers-reduced-motion:reduce){
-
-html{
-scroll-behavior:auto
-}
-
-.menu-toggle span,
-.mobile-menu,
-.button{
-transition-duration:.01ms!important
-}
-
-}
+.
