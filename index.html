@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Patrick McVey | Routalk Build</title>
 <meta name="description" content="Patrick McVey | Routalk Build. Communication, websites, digital products and technology built around clear outcomes.">
 <meta name="author" content="Patrick McVey">
 <meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://pj-routalk.vercel.app/">
+
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
@@ -33,20 +36,122 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap"
+rel="stylesheet"
+>
+
 <link rel="stylesheet" href="styles.css">
+
+<style>
+.team-section .team-grid{
+grid-template-columns:repeat(2,minmax(0,1fr));
+max-width:980px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.team-section .team-card-primary{
+grid-column:1/-1;
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+border-color:rgba(78,255,230,.40);
+background:
+linear-gradient(135deg,rgba(78,255,230,.08),transparent 38%),
+rgba(3,14,18,.86);
+box-shadow:
+0 22px 55px rgba(0,0,0,.24),
+inset 0 1px 0 rgba(78,255,230,.10);
+}
+
+.team-section .team-card-primary::before{
+height:3px;
+background:linear-gradient(
+90deg,
+var(--accent),
+rgba(78,255,230,.72),
+rgba(78,255,230,.12)
+);
+}
+
+.team-section .team-card-primary .team-card-top{
+border-bottom:0;
+border-right:1px solid var(--line-soft);
+padding:38px 34px;
+}
+
+.team-section .team-card-primary .team-copy{
+display:flex;
+align-items:center;
+padding:38px 40px;
+}
+
+.team-section .team-card-primary h3{
+font-size:clamp(2rem,4vw,3rem);
+}
+
+.team-section .team-card-support{
+background:
+linear-gradient(145deg,rgba(78,255,230,.018),transparent 34%),
+rgba(3,14,18,.68);
+}
+
+@media(max-width:720px){
+
+.team-section .team-grid{
+grid-template-columns:1fr;
+}
+
+.team-section .team-card-primary{
+grid-column:auto;
+display:block;
+}
+
+.team-section .team-card-primary .team-card-top{
+border-right:0;
+border-bottom:1px solid var(--line-soft);
+padding:30px 28px 27px;
+}
+
+.team-section .team-card-primary .team-copy{
+display:block;
+padding:27px 28px 30px;
+}
+
+}
+</style>
+
 </head>
 
 <body>
 
 <div class="site-background" aria-hidden="true">
-<video class="background-video background-desktop" autoplay muted loop playsinline preload="auto">
+
+<video
+class="background-video background-desktop"
+autoplay
+muted
+loop
+playsinline
+preload="auto"
+>
 <source src="routalk-background-motion.webm" type="video/webm">
 </video>
-<video class="background-video background-mobile" autoplay muted loop playsinline preload="auto">
+
+<video
+class="background-video background-mobile"
+autoplay
+muted
+loop
+playsinline
+preload="auto"
+>
 <source src="routalk-background-motion.webm" type="video/webm">
 </video>
+
 <div class="background-overlay"></div>
+
 </div>
 
 <main id="top" class="site-shell">
@@ -68,16 +173,31 @@
 </nav>
 
 <div class="header-actions">
-<span class="button primary header-coming-soon" aria-disabled="true">Routalk Coming Soon</span>
 
-<button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+<span class="button primary header-coming-soon" aria-disabled="true">
+Routalk Coming Soon
+</span>
+
+<button
+class="menu-toggle"
+type="button"
+aria-label="Open navigation menu"
+aria-expanded="false"
+aria-controls="mobile-menu"
+>
 <span></span>
 <span></span>
 <span></span>
 </button>
+
 </div>
 
-<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+<nav
+id="mobile-menu"
+class="mobile-menu"
+aria-label="Mobile navigation"
+aria-hidden="true"
+>
 <a href="#about">About</a>
 <a href="#route">How I Work</a>
 <a href="#work">What I Do</a>
@@ -99,7 +219,9 @@
 
 <h1>
 I turn business problems
-<span>into clear digital direction<span class="hero-accent">.</span></span>
+<span>
+into clear digital direction<span class="hero-accent">.</span>
+</span>
 </h1>
 
 <p class="hero-text">
@@ -123,7 +245,10 @@ and how to move from a rough idea to something people can actually use.
 
 </div>
 
-<p class="eyebrow" style="margin-top:34px;margin-bottom:0;">
+<p
+class="eyebrow"
+style="margin-top:34px;margin-bottom:0;"
+>
 Building with the Routalk philosophy.
 </p>
 
@@ -136,70 +261,142 @@ Building with the Routalk philosophy.
 <div class="foundation-list">
 
 <article class="foundation-item">
+
 <div class="foundation-icon" aria-hidden="true">
-<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<svg
+viewBox="0 0 64 64"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+>
 <circle cx="32" cy="32" r="27" stroke="currentColor" stroke-width="3"/>
 <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="3"/>
 <circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="3"/>
 <circle cx="32" cy="32" r="3.5" fill="currentColor"/>
 </svg>
+
 </div>
 
 <div class="foundation-copy">
 <span class="foundation-number">01</span>
 <h3>CLARITY FIRST</h3>
-<p>Clear communication at the start creates alignment, reduces revisions, and saves time.</p>
+<p>
+Clear communication at the start creates alignment, reduces revisions,
+and saves time.
+</p>
 </div>
+
 </article>
 
 <article class="foundation-item">
+
 <div class="foundation-icon" aria-hidden="true">
-<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<svg
+viewBox="0 0 64 64"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+>
 <rect x="9" y="34" width="10" height="21" rx="2" fill="currentColor"/>
 <rect x="27" y="20" width="10" height="35" rx="2" fill="currentColor"/>
 <rect x="45" y="27" width="10" height="28" rx="2" fill="currentColor"/>
-<path d="M10 24L25 13L37 18L54 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path
+d="M10 24L25 13L37 18L54 8"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
 </svg>
+
 </div>
 
 <div class="foundation-copy">
 <span class="foundation-number">02</span>
 <h3>STRATEGIC FOCUS</h3>
-<p>Every decision should support the real business objective, not add technology or complexity for its own sake.</p>
+<p>
+Every decision should support the real business objective, not add
+technology or complexity for its own sake.
+</p>
 </div>
+
 </article>
 
 <article class="foundation-item">
+
 <div class="foundation-icon" aria-hidden="true">
-<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 23L21 15L31 21L23 30L17 27L9 34" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M55 23L43 15L33 21L41 30L47 27L55 34" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22 30L29 36C31 38 34 38 36 36L42 30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-<path d="M26 39L31 44C33 46 36 46 38 44L45 37" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+
+<svg
+viewBox="0 0 64 64"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+d="M9 23L21 15L31 21L23 30L17 27L9 34"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
+<path
+d="M55 23L43 15L33 21L41 30L47 27L55 34"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
+<path
+d="M22 30L29 36C31 38 34 38 36 36L42 30"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
+<path
+d="M26 39L31 44C33 46 36 46 38 44L45 37"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 </svg>
+
 </div>
 
 <div class="foundation-copy">
 <span class="foundation-number">03</span>
 <h3>TRUE PARTNERSHIP</h3>
-<p>Strong work comes from clear communication, shared expectations, and people staying aligned from idea to execution.</p>
+<p>
+Strong work comes from clear communication, shared expectations,
+and people staying aligned from idea to execution.
+</p>
 </div>
+
 </article>
 
 </div>
 
 </section>
 
-<section id="about" class="glass-panel content-glass section about-section">
+<section
+id="about"
+class="glass-panel content-glass section about-section"
+>
 
 <div class="section-heading">
-<p class="eyebrow">ABOUT</p>
-<h2>Technology matters. Understanding people matters more.</h2>
+
+<p class="eyebrow">
+ABOUT
+</p>
+
+<h2>
+Technology matters. Understanding people matters more.
+</h2>
+
 </div>
 
 <div class="about-layout">
 
 <div class="copy about-copy">
+
 <p>
 Over the past five years, I have worked across digital technology,
 finance and online products. Along the way, I learned that the hardest
@@ -226,32 +423,66 @@ Whether the project starts as a rough idea, an outdated website or
 a workflow that is causing problems, the starting point is the same:
 understand it first, then build with purpose.
 </p>
+
 </div>
 
 <div class="about-principles">
 
 <article class="principle">
+
 <span>01</span>
+
 <div>
-<h3>Clear communication</h3>
-<p>Understand the problem, ask the right questions and make the direction understandable before development begins.</p>
+
+<h3>
+Clear communication
+</h3>
+
+<p>
+Understand the problem, ask the right questions and make the direction
+understandable before development begins.
+</p>
+
 </div>
+
 </article>
 
 <article class="principle">
+
 <span>02</span>
+
 <div>
-<h3>Purpose before appearance</h3>
-<p>Good design should help people understand, trust and use the experience instead of existing only to look impressive.</p>
+
+<h3>
+Purpose before appearance
+</h3>
+
+<p>
+Good design should help people understand, trust and use the experience
+instead of existing only to look impressive.
+</p>
+
 </div>
+
 </article>
 
 <article class="principle">
+
 <span>03</span>
+
 <div>
-<h3>Build what is needed</h3>
-<p>The answer is not automatically a website. The outcome should determine the technology.</p>
+
+<h3>
+Build what is needed
+</h3>
+
+<p>
+The answer is not automatically a website. The outcome should determine
+the technology.
+</p>
+
 </div>
+
 </article>
 
 </div>
@@ -260,49 +491,84 @@ understand it first, then build with purpose.
 
 </section>
 
-<section id="work" class="glass-panel content-glass section work-section">
+<section
+id="work"
+class="glass-panel content-glass section work-section"
+>
 
 <div class="section-heading centered-heading">
-<p class="eyebrow">WHAT WE BUILD</p>
-<h2>Build what moves the business forward.</h2>
+
+<p class="eyebrow">
+WHAT WE BUILD
+</p>
+
+<h2>
+Build what moves the business forward.
+</h2>
+
 <p class="section-lead">
 The answer is not always a new website. We start with the outcome,
 then decide what combination of communication, design and technology
 will make that outcome easier to reach.
 </p>
+
 </div>
 
 <div class="services">
 
 <article class="service-card">
-<span class="service-number">01</span>
-<h3>Websites</h3>
+
+<span class="service-number">
+01
+</span>
+
+<h3>
+Websites
+</h3>
+
 <p>
 For businesses that need a stronger first impression, clearer
 services and a better path from visitor to inquiry. The goal is
 simple: help people understand the business quickly and give them
 a clear reason to take the next step.
 </p>
+
 </article>
 
 <article class="service-card">
-<span class="service-number">02</span>
-<h3>Digital Products</h3>
+
+<span class="service-number">
+02
+</span>
+
+<h3>
+Digital Products
+</h3>
+
 <p>
 Dashboards, interfaces, forms, internal tools and custom digital
 experiences built around a real job that needs to get done.
 Technology should remove friction from a workflow, not add more.
 </p>
+
 </article>
 
 <article class="service-card">
-<span class="service-number">03</span>
-<h3>Direction &amp; Communication</h3>
+
+<span class="service-number">
+03
+</span>
+
+<h3>
+Direction &amp; Communication
+</h3>
+
 <p>
 Sometimes the problem comes before the build. We help clarify the
 audience, message, structure and user journey so everyone involved
 understands what is being created and why.
 </p>
+
 </article>
 
 </div>
@@ -313,9 +579,13 @@ understands what is being created and why.
 
 <div class="section-heading centered-heading">
 
-<p class="eyebrow">SELECTED CONCEPTS</p>
+<p class="eyebrow">
+SELECTED CONCEPTS
+</p>
 
-<h2>See how I think before the build begins.</h2>
+<h2>
+See how I think before the build begins.
+</h2>
 
 <p class="section-lead">
 Independent concept explorations show how I look at an existing
@@ -323,12 +593,17 @@ business, identify opportunities and translate those observations
 into clearer digital direction.
 </p>
 
-<div class="actions" style="justify-content:center;margin-left:auto;margin-right:auto;">
+<div
+class="actions"
+style="justify-content:center;margin-left:auto;margin-right:auto;"
+>
+
 <a href="concepts.html" class="button primary hero-button">
 <span class="button-icon" aria-hidden="true">↗</span>
 <span class="button-label">Explore selected concepts</span>
 <span class="button-arrow" aria-hidden="true">→</span>
 </a>
+
 </div>
 
 </div>
@@ -339,7 +614,9 @@ into clearer digital direction.
 
 <div class="team-heading">
 
-<p class="eyebrow">THE PEOPLE BEHIND ROUTALK BUILD</p>
+<p class="eyebrow">
+MY ROLE WITH ROUTALK BUILD
+</p>
 
 <h2>
 Clear direction.
@@ -347,66 +624,103 @@ Strong execution.
 </h2>
 
 <p>
-Routalk Build connects direction, strategic marketing and design,
-and technical execution so the idea, presentation and finished
-product stay aligned.
+I lead direction and communication, working with specialists in
+strategic marketing, design and engineering so the idea, presentation
+and finished product stay aligned.
 </p>
 
 </div>
 
 <div class="team-grid">
 
-<article class="team-card">
+<article class="team-card team-card-primary">
 
 <div class="team-card-top">
-<span class="team-number">01</span>
-<p class="team-role">DIRECTION &amp; COMMUNICATION</p>
-<h3>Patrick McVey</h3>
+
+<span class="team-number">
+01 · PRIMARY ROLE
+</span>
+
+<p class="team-role">
+DIRECTION &amp; COMMUNICATION
+</p>
+
+<h3>
+Patrick McVey
+</h3>
+
 <p class="team-skills">
 Strategy · Communication · Client Direction · Product Thinking
 </p>
+
 </div>
 
 <div class="team-copy">
+
 <p>
-Patrick helps businesses clarify the real problem and turn rough
-ideas into a clear direction, connecting the business goal, user
+I help businesses clarify the real problem and turn rough ideas
+into a clear direction, connecting the business goal, user
 experience and technology from the first conversation through execution.
 </p>
+
 </div>
 
 </article>
 
-<article class="team-card">
+<article class="team-card team-card-support">
 
 <div class="team-card-top">
-<span class="team-number">02</span>
-<p class="team-role">STRATEGIC MARKETING &amp; DESIGN</p>
-<h3>James F.</h3>
+
+<span class="team-number">
+02
+</span>
+
+<p class="team-role">
+STRATEGIC MARKETING &amp; DESIGN
+</p>
+
+<h3>
+James F.
+</h3>
+
 <p class="team-skills">
 Marketing Strategy · Positioning · Design · Communication
 </p>
+
 </div>
 
 <div class="team-copy">
+
 <p>
 James contributes strategic marketing and design perspective,
 helping shape how ideas are positioned, presented and communicated
 as they move from direction toward execution.
 </p>
+
 </div>
 
 </article>
 
-<article class="team-card">
+<article class="team-card team-card-support">
 
 <div class="team-card-top">
-<span class="team-number">03</span>
-<p class="team-role">DEVELOPMENT &amp; ENGINEERING</p>
-<h3>Gabriel Brázdil</h3>
+
+<span class="team-number">
+03
+</span>
+
+<p class="team-role">
+DEVELOPMENT &amp; ENGINEERING
+</p>
+
+<h3>
+Gabriel Brázdil
+</h3>
+
 <p class="team-skills">
 Development · Engineering · Product · Technical Execution
 </p>
+
 </div>
 
 <div class="team-copy">
@@ -423,24 +737,53 @@ into reliable websites, applications, tools and digital products.
 </div>
 
 <div class="team-bridge">
-<span>DIRECTION</span>
-<strong>+</strong>
-<span>MARKETING &amp; DESIGN</span>
-<strong>+</strong>
-<span>EXECUTION</span>
-<strong>=</strong>
-<span>ROUTALK BUILD</span>
+
+<span>
+DIRECTION
+</span>
+
+<strong>
++
+</strong>
+
+<span>
+MARKETING &amp; DESIGN
+</span>
+
+<strong>
++
+</strong>
+
+<span>
+EXECUTION
+</span>
+
+<strong>
+=
+</strong>
+
+<span>
+ROUTALK BUILD
+</span>
+
 </div>
 
 </section>
 
-<section id="route" class="glass-panel content-glass section route-section">
+<section
+id="route"
+class="glass-panel content-glass section route-section"
+>
 
 <div class="section-heading centered-heading">
 
-<p class="eyebrow">THE ROUTE METHOD</p>
+<p class="eyebrow">
+THE ROUTE METHOD
+</p>
 
-<h2>A clear route from idea to execution.</h2>
+<h2>
+A clear route from idea to execution.
+</h2>
 
 <p class="section-lead">
 Every project moves through the same core thinking: understand the
@@ -453,64 +796,155 @@ the plan into technology and execute with everyone aligned.
 <div class="route-grid">
 
 <article class="route-step">
-<span class="route-letter">R</span>
+
+<span class="route-letter">
+R
+</span>
+
 <div>
-<p class="route-label">RECOGNIZE</p>
-<h3>Recognize the objective</h3>
-<p>Understand the real problem, audience and desired outcome before deciding what should be built.</p>
+
+<p class="route-label">
+RECOGNIZE
+</p>
+
+<h3>
+Recognize the objective
+</h3>
+
+<p>
+Understand the real problem, audience and desired outcome before
+deciding what should be built.
+</p>
+
 </div>
+
 </article>
 
 <article class="route-step">
-<span class="route-letter">O</span>
+
+<span class="route-letter">
+O
+</span>
+
 <div>
-<p class="route-label">ORGANIZE</p>
-<h3>Organize the direction</h3>
-<p>Clarify the message, structure, priorities and path forward so the project has a clear direction from the start.</p>
+
+<p class="route-label">
+ORGANIZE
+</p>
+
+<h3>
+Organize the direction
+</h3>
+
+<p>
+Clarify the message, structure, priorities and path forward so the
+project has a clear direction from the start.
+</p>
+
 </div>
+
 </article>
 
 <article class="route-step">
-<span class="route-letter">U</span>
+
+<span class="route-letter">
+U
+</span>
+
 <div>
-<p class="route-label">UNDERSTAND</p>
-<h3>Understand the user</h3>
-<p>Shape the experience around how real people need to understand, trust and use what is being created.</p>
+
+<p class="route-label">
+UNDERSTAND
+</p>
+
+<h3>
+Understand the user
+</h3>
+
+<p>
+Shape the experience around how real people need to understand,
+trust and use what is being created.
+</p>
+
 </div>
+
 </article>
 
 <article class="route-step">
-<span class="route-letter">T</span>
+
+<span class="route-letter">
+T
+</span>
+
 <div>
-<p class="route-label">TRANSLATE</p>
-<h3>Translate into technology</h3>
-<p>Turn the approved direction into reliable websites, applications, tools and digital products.</p>
+
+<p class="route-label">
+TRANSLATE
+</p>
+
+<h3>
+Translate into technology
+</h3>
+
+<p>
+Turn the approved direction into reliable websites, applications,
+tools and digital products.
+</p>
+
 </div>
+
 </article>
 
 <article class="route-step">
-<span class="route-letter">E</span>
+
+<span class="route-letter">
+E
+</span>
+
 <div>
-<p class="route-label">EXECUTE</p>
-<h3>Execute with alignment</h3>
-<p>Keep communication, design and development connected from the first conversation through the working product.</p>
+
+<p class="route-label">
+EXECUTE
+</p>
+
+<h3>
+Execute with alignment
+</h3>
+
+<p>
+Keep communication, design and development connected from the first
+conversation through the working product.
+</p>
+
 </div>
+
 </article>
 
 </div>
 
 </section>
 
-<section id="global" class="glass-panel content-glass section global-section">
+<section
+id="global"
+class="glass-panel content-glass section global-section"
+>
 
 <div class="section-heading centered-heading">
-<p class="eyebrow">BUILT WITHOUT BORDERS</p>
-<h2>Different language. Different market. Same standard.</h2>
+
+<p class="eyebrow">
+BUILT WITHOUT BORDERS
+</p>
+
+<h2>
+Different language. Different market. Same standard.
+</h2>
+
 </div>
 
 <div class="global-layout">
 
 <div class="global-statement">
+
 <p>
 Routalk Build can work wherever the project makes sense.
 Geography should not decide whether a business gets clear
@@ -522,65 +956,115 @@ We can collaborate across countries, cultures and time zones while
 keeping the project understandable from the first conversation
 through delivery.
 </p>
+
 </div>
 
 <div class="global-points">
 
 <article class="global-point">
-<span>01</span>
+
+<span>
+01
+</span>
+
 <div>
-<h3>Language should not be the barrier</h3>
+
+<h3>
+Language should not be the barrier
+</h3>
+
 <p>
 Websites and digital products can be planned for English,
 multilingual audiences or markets where the primary language
 is different from our own.
 </p>
+
 </div>
+
 </article>
 
 <article class="global-point">
-<span>02</span>
+
+<span>
+02
+</span>
+
 <div>
-<h3>Remote from the start</h3>
+
+<h3>
+Remote from the start
+</h3>
+
 <p>
 Clear communication, organized decisions and digital workflows
 allow projects to move forward without everyone needing to be
 in the same room or even the same country.
 </p>
+
 </div>
+
 </article>
 
 <article class="global-point">
-<span>03</span>
+
+<span>
+03
+</span>
+
 <div>
-<h3>Built for the people using it</h3>
+
+<h3>
+Built for the people using it
+</h3>
+
 <p>
 Translation alone is not enough. The message, structure and
 experience should make sense to the audience the product is
 actually meant to serve.
 </p>
+
 </div>
+
 </article>
 
 <article class="global-point global-point-reach">
 
-<span>04</span>
+<span>
+04
+</span>
 
 <div>
 
-<p class="reach-label">OUR REACH</p>
+<p class="reach-label">
+OUR REACH
+</p>
 
-<h3>From Milwaukee, built to travel.</h3>
+<h3>
+From Milwaukee, built to travel.
+</h3>
 
 <p class="reach-statement">
 Milwaukee is home. The work does not have to be.
 </p>
 
 <div class="reach-flow">
-<div class="reach-item"><strong>Milwaukee roots</strong></div>
-<div class="reach-item"><strong>United States</strong></div>
-<div class="reach-item"><strong>Europe</strong></div>
-<div class="reach-item reach-item-last"><strong>Worldwide ready</strong></div>
+
+<div class="reach-item">
+<strong>Milwaukee roots</strong>
+</div>
+
+<div class="reach-item">
+<strong>United States</strong>
+</div>
+
+<div class="reach-item">
+<strong>Europe</strong>
+</div>
+
+<div class="reach-item reach-item-last">
+<strong>Worldwide ready</strong>
+</div>
+
 </div>
 
 </div>
@@ -593,11 +1077,21 @@ Milwaukee is home. The work does not have to be.
 
 </section>
 
-<section id="connect" class="glass-panel content-glass section connect-section">
+<section
+id="connect"
+class="glass-panel content-glass section connect-section"
+>
 
 <div class="connect-heading">
-<p class="eyebrow">START A CONVERSATION</p>
-<h2>Have an idea? Tell me what you are trying to solve.</h2>
+
+<p class="eyebrow">
+START A CONVERSATION
+</p>
+
+<h2>
+Have an idea? Tell me what you are trying to solve.
+</h2>
+
 </div>
 
 <div class="connect-panel">
@@ -611,55 +1105,33 @@ in mind and we can figure out the right next step from there.
 <div class="connect-options">
 
 <article class="connect-option">
-<span>01</span>
+
+<span>
+01
+</span>
+
 <div>
-<h3>Start with the problem</h3>
-<p>Tell me what is not working, what you want to improve or what you are trying to create. A rough idea is enough to begin.</p>
+
+<h3>
+Start with the problem
+</h3>
+
+<p>
+Tell me what is not working, what you want to improve or what you
+are trying to create. A rough idea is enough to begin.
+</p>
+
 </div>
+
 </article>
 
 <article class="connect-option">
-<span>02</span>
+
+<span>
+02
+</span>
+
 <div>
-<h3>We find the right direction</h3>
-<p>From there, we can decide whether the answer is a website, digital product, workflow improvement or something simpler.</p>
-</div>
-</article>
 
-</div>
-
-<div class="connect-actions">
-
-<a href="mailto:pjmcvey.routalk@gmail.com?subject=Routalk%20Build%20Project%20Inquiry" class="button primary">
-Email Patrick
-</a>
-
-<span class="button secondary" aria-disabled="true">
-Routalk · Coming Soon
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-<footer class="glass-panel content-glass site-footer">
-
-<span class="footer-brand">
-<strong>ROUTALK</strong>
-BUILD
-</span>
-
-<span>Patrick McVey · Milwaukee / Worldwide</span>
-
-<span id="year"></span>
-
-</footer>
-
-</main>
-
-<script src="script.js"></script>
-
-</body>
-  </html>
+<h3>
+We fi
