@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Selected Concepts | Patrick McVey</title>
 <meta name="description" content="Selected concepts and design thinking from Patrick McVey. Independent explorations showing how business problems can be translated into clearer digital direction.">
 <meta name="author" content="Patrick McVey">
 <meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://pj-routalk.vercel.app/concepts.html">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -34,18 +36,104 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="styles.css">
+
+<style>
+.concepts-page .hero{
+min-height:500px;
+padding-top:clamp(52px,6vw,72px);
+padding-bottom:clamp(52px,6vw,72px);
+}
+
+.concepts-page .section{
+padding-top:clamp(44px,6vw,68px);
+padding-bottom:clamp(44px,6vw,68px);
+}
+
+.concepts-page .section-heading{
+margin-bottom:38px;
+}
+
+.concepts-page .about-section .section-heading{
+margin-bottom:40px;
+}
+
+.concepts-page .about-layout{
+gap:clamp(34px,6vw,68px);
+}
+
+.concepts-page .concept-visual{
+max-width:1040px;
+margin:28px auto 0;
+padding:12px;
+border-radius:22px;
+box-shadow:0 22px 60px rgba(0,0,0,.28);
+}
+
+.concepts-page .concept-visual img{
+display:block;
+width:100%;
+height:auto;
+border-radius:15px;
+}
+
+.concepts-page .concept-vet{
+border:1px solid rgba(78,255,230,.22);
+background:rgba(2,12,16,.72);
+}
+
+.concepts-page .concept-landscape{
+border:1px solid rgba(158,255,78,.26);
+background:rgba(7,18,12,.78);
+}
+
+.concepts-page .concept-nonprofit{
+border:1px solid rgba(184,132,255,.30);
+background:rgba(15,8,24,.78);
+}
+
+@media(max-width:720px){
+.concepts-page .hero{
+min-height:auto;
+padding-top:48px;
+padding-bottom:48px;
+}
+
+.concepts-page .section{
+padding-top:42px;
+padding-bottom:42px;
+}
+
+.concepts-page .section-heading,
+.concepts-page .about-section .section-heading{
+margin-bottom:32px;
+}
+
+.concepts-page .concept-visual{
+margin-top:24px;
+padding:8px;
+border-radius:18px;
+}
+
+.concepts-page .concept-visual img{
+border-radius:12px;
+}
+}
+</style>
 </head>
 
-<body>
+<body class="concepts-page">
 
 <div class="site-background" aria-hidden="true">
 <video class="background-video background-desktop" autoplay muted loop playsinline preload="auto">
 <source src="routalk-background-motion.webm" type="video/webm">
 </video>
+
 <video class="background-video background-mobile" autoplay muted loop playsinline preload="auto">
 <source src="routalk-background-motion.webm" type="video/webm">
 </video>
+
 <div class="background-overlay"></div>
 </div>
 
@@ -68,23 +156,31 @@
 </nav>
 
 <div class="header-actions">
+
 <span class="button primary header-coming-soon" aria-disabled="true">
 Routalk Coming Soon
 </span>
 
-<button class="menu-toggle" type="button"
+<button
+class="menu-toggle"
+type="button"
 aria-label="Open navigation menu"
 aria-expanded="false"
-aria-controls="mobile-menu">
+aria-controls="mobile-menu"
+>
 <span></span>
 <span></span>
 <span></span>
 </button>
+
 </div>
 
-<nav id="mobile-menu" class="mobile-menu"
+<nav
+id="mobile-menu"
+class="mobile-menu"
 aria-label="Mobile navigation"
-aria-hidden="true">
+aria-hidden="true"
+>
 <a href="index.html">Home</a>
 <a href="index.html#about">About</a>
 <a href="index.html#route">How I Work</a>
@@ -106,7 +202,9 @@ aria-hidden="true">
 
 <h1>
 Ideas explored
-<span>before they become projects<span class="hero-accent">.</span></span>
+<span>
+before they become projects<span class="hero-accent">.</span>
+</span>
 </h1>
 
 <p class="hero-text">
@@ -139,7 +237,9 @@ a different digital direction.
 
 <div class="section-heading centered-heading">
 
-<p class="eyebrow">SELECTED CONCEPTS</p>
+<p class="eyebrow">
+SELECTED CONCEPTS
+</p>
 
 <h2>
 Different problems should lead to different experiences.
@@ -217,21 +317,12 @@ client tools and the mobile experience.
 
 </div>
 
-<div style="
-max-width:1040px;
-margin:42px auto 0;
-padding:14px;
-border:1px solid rgba(78,255,230,.22);
-border-radius:22px;
-background:rgba(2,12,16,.72);
-box-shadow:0 22px 60px rgba(0,0,0,.28);
-">
+<div class="concept-visual concept-vet">
 
 <img
 src="concept-veterinary-care-animal-clinic.png"
 alt="Verona Veterinary Medical Service independent website concept"
 loading="lazy"
-style="display:block;width:100%;height:auto;border-radius:15px;"
 >
 
 </div>
@@ -300,21 +391,12 @@ and applicants actually need to take.
 
 </div>
 
-<div style="
-max-width:1040px;
-margin:42px auto 0;
-padding:14px;
-border:1px solid rgba(158,255,78,.26);
-border-radius:22px;
-background:rgba(7,18,12,.78);
-box-shadow:0 22px 60px rgba(0,0,0,.28);
-">
+<div class="concept-visual concept-landscape">
 
 <img
 src="greenfield-landscape-concept.png"
 alt="Greenfield Landscape Solutions independent seasonal landscaping website concept"
 loading="lazy"
-style="display:block;width:100%;height:auto;border-radius:15px;"
 >
 
 </div>
@@ -383,21 +465,12 @@ volunteering and other ways to become involved.
 
 </div>
 
-<div style="
-max-width:1040px;
-margin:42px auto 0;
-padding:14px;
-border:1px solid rgba(184,132,255,.30);
-border-radius:22px;
-background:rgba(15,8,24,.78);
-box-shadow:0 22px 60px rgba(0,0,0,.28);
-">
+<div class="concept-visual concept-nonprofit">
 
 <img
 src="concept-nonprofit-balance.png"
 alt="Balance Inc. independent nonprofit website concept"
 loading="lazy"
-style="display:block;width:100%;height:auto;border-radius:15px;"
 >
 
 </div>
@@ -431,7 +504,8 @@ change when the problem changes.
 
 <a
 href="mailto:pjmcvey.routalk@gmail.com?subject=Concept%20or%20Project%20Inquiry"
-class="button primary">
+class="button primary"
+>
 Email Patrick
 </a>
 
